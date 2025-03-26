@@ -16,7 +16,27 @@
         text-align: center;
         font-size: 2.5rem;
         color: #2c3e50;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
+      }
+
+      .search-container {
+        max-width: 500px;
+        margin: 0 auto 30px auto;
+      }
+
+      .search-input {
+        width: 100%;
+        padding: 15px 20px;
+        border-radius: 30px;
+        border: 1px solid #ccc;
+        font-size: 1rem;
+        outline: none;
+        transition: box-shadow 0.3s;
+      }
+
+      .search-input:focus {
+        box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+        border-color: #3498db;
       }
 
       .container {
@@ -35,6 +55,7 @@
         text-align: center;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         cursor: pointer;
+        text-decoration: none;
       }
 
       .folder-card:hover {
@@ -58,32 +79,61 @@
         font-size: 1.2rem;
         color: #2c3e50;
         transition: color 0.3s;
+        word-break: break-word;
       }
 
       .folder-card:hover .folder-name {
         color: #2980b9;
+      }
+
+      .hidden {
+        display: none;
       }
     </style>
   </head>
   <body>
     <h1>📂 All of my Project Dashboard</h1>
 
+    <div class="search-container">
+      <input
+        type="text"
+        id="search"
+        class="search-input"
+        placeholder="🔍 Search your projects..."
+      />
+    </div>
+
     <div class="container" id="folder-container"></div>
 
     <script>
-      // Your folders list here
       const folders = ["ffn"];
 
       const container = document.getElementById("folder-container");
-      folders.forEach((folder) => {
-        const card = document.createElement("a");
-        card.href = `./${folder}/`;
-        card.className = "folder-card";
-        card.innerHTML = `
-        <div class="folder-icon">📁</div>
-        <div class="folder-name">${folder}</div>
-      `;
-        container.appendChild(card);
+      const searchInput = document.getElementById("search");
+
+      // Render folders
+      function renderFolders(filter = "") {
+        container.innerHTML = "";
+        folders.forEach((folder) => {
+          if (folder.toLowerCase().includes(filter.toLowerCase())) {
+            const card = document.createElement("a");
+            card.href = `./${folder}/`;
+            card.className = "folder-card";
+            card.innerHTML = `
+              <div class="folder-icon">📁</div> 
+              <div class="folder-name">${folder}</div>
+            `;
+            container.appendChild(card);
+          }
+        });
+      }
+
+      // Initial render
+      renderFolders();
+
+      // Filter as you type
+      searchInput.addEventListener("input", (e) => {
+        renderFolders(e.target.value);
       });
     </script>
   </body>
