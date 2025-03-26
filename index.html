@@ -2,46 +2,94 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Y-Non's Dashboard</title>
+    <title>📂 All of my Project Dashboard</title>
     <style>
       body {
-        font-family: Arial, sans-serif;
-        background: #f5f5f5;
-        padding: 20px;
-      }
-      h1 {
+        font-family: "Poppins", sans-serif;
+        background: #f0f4f8;
         color: #333;
+        padding: 40px;
+        margin: 0;
       }
-      ul {
-        list-style: none;
-        padding: 0;
+
+      h1 {
+        text-align: center;
+        font-size: 2.5rem;
+        color: #2c3e50;
+        margin-bottom: 40px;
       }
-      li {
-        margin: 10px 0;
+
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
       }
-      a {
-        text-decoration: none;
-        color: #2196f3;
-        font-size: 18px;
+
+      .folder-card {
+        background-color: #ffffff;
+        padding: 25px 20px;
+        border-radius: 15px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
       }
-      a:hover {
-        text-decoration: underline;
+
+      .folder-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        background-color: #fefefe;
+      }
+
+      .folder-icon {
+        font-size: 50px;
+        color: #3498db;
+        margin-bottom: 15px;
+        transition: color 0.3s;
+      }
+
+      .folder-card:hover .folder-icon {
+        color: #2980b9;
+      }
+
+      .folder-name {
+        font-size: 1.2rem;
+        color: #2c3e50;
+        transition: color 0.3s;
+      }
+
+      .folder-card:hover .folder-name {
+        color: #2980b9;
       }
     </style>
   </head>
   <body>
-    <h1>📁 Y-Non's Project Dashboard</h1>
-    <ul id="folder-list"></ul>
+    <h1>📂 Y-Non's Project Dashboard</h1>
+
+    <div class="container" id="folder-container"></div>
 
     <script>
-      // Manually list your folders here
-      const folders = ["ffn"];
+      // Your folders list here
+      const folders = [
+        "folder1",
+        "folder2",
+        "folder3",
+        "my-awesome-project",
+        "test-folder",
+      ];
 
-      const list = document.getElementById("folder-list");
+      const container = document.getElementById("folder-container");
       folders.forEach((folder) => {
-        const li = document.createElement("li");
-        li.innerHTML = `<a href="./${folder}/">${folder}</a>`;
-        list.appendChild(li);
+        const card = document.createElement("a");
+        card.href = `./${folder}/`;
+        card.className = "folder-card";
+        card.innerHTML = `
+        <div class="folder-icon">📁</div>
+        <div class="folder-name">${folder}</div>
+      `;
+        container.appendChild(card);
       });
     </script>
   </body>
