@@ -45,6 +45,35 @@
         background: white;
       }
 
+         .download-btn {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: #ff6b4a;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 25px;
+        font-size: 0.9em;
+        font-weight: 600;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        box-shadow: 0 2px 5px rgba(255, 107, 74, 0.3);
+      }
+      .download-btn:hover {
+        background: #e5593e;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(255, 107, 74, 0.4);
+      }
+      .download-btn::before {
+        content: "📄";
+        font-size: 1em;
+      }
+
       .header {
         margin-bottom: 30px;
       }
@@ -460,6 +489,10 @@
       </div>
 
       <div class="main-content">
+        <button class="download-btn" onclick="downloadPDF()">
+          Download PDF CV
+        </button>
+
         <div class="main-section">
           <h2 class="main-section-title">CAREER OBJECTIVE</h2>
           <p class="career-objective">
@@ -723,3 +756,14 @@
     </div>
   </body>
 </html>
+
+<script>
+function downloadPDF() {
+  const link = document.createElement("a");
+  link.href = "/TranAnhKhoa_CV.pdf"; // Make sure this file is in your public folder or accessible path
+  link.download = "TranAnhKhoa_CV.pdf";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+</script>
