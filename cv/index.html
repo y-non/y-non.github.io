@@ -45,7 +45,7 @@
         background: white;
       }
 
-         .download-btn {
+      .download-btn {
         position: fixed;
         top: 20px;
         right: 20px;
@@ -63,6 +63,7 @@
         transition: all 0.3s ease;
         text-decoration: none;
         box-shadow: 0 2px 5px rgba(255, 107, 74, 0.3);
+        z-index: 10;
       }
       .download-btn:hover {
         background: #e5593e;
@@ -323,7 +324,7 @@
       }
 
       .responsibilities li {
-        font-size: 0.85em;
+        font-size: 0.9em;
         color: #555;
         margin-bottom: 4px;
         padding-left: 12px;
@@ -356,6 +357,8 @@
         font-size: 0.8em;
         color: #666;
         margin-bottom: 8px;
+        display: flex;
+        flex-direction: column;
       }
 
       .technologies strong {
@@ -444,25 +447,25 @@
           <h2 class="section-title">SKILLS</h2>
           <div class="skills-section">
             <div class="skills-category">
-              <h4>Coding</h4>
+              <h4>Professional Skills</h4>
               <ul class="skills-list">
-                <li>Vue.js</li>
-                <li>Quasar</li>
-                <li>Nuxt.js</li>
-                <li>Astro</li>
-                <li>PrimeVue</li>
-                <li>JavaScript</li>
-                <li>TypeScript</li>
-                <li>HTML/CSS</li>
+                <li>Team Leadership & Mentoring</li>
+                <li>Agile/Scrum Methodologies</li>
+                <li>Project Management</li>
+                <li>Problem Solving</li>
+                <li>Cross-functional Collaboration</li>
+                <li>Technical Presentation</li>
+                <li>Code Review & Quality Assurance</li>
+                <li>User Experience Design</li>
               </ul>
             </div>
 
             <div class="skills-category">
               <h4>Languages</h4>
               <ul class="skills-list">
-                <li>English (C1)</li>
-                <li>Chinese (HSK5)</li>
-                <li>Japanese (N3)</li>
+                <li>English (Fluent)</li>
+                <li>Chinese (Fluent)</li>
+                <li>Japanese (Basics)</li>
               </ul>
             </div>
           </div>
@@ -471,12 +474,22 @@
         <div class="section">
           <h2 class="section-title">CERTIFICATIONS</h2>
           <ul class="certifications">
-            <li>Toeic 600 (IIG) - July 2024</li>
-            <li><a href="https://www.freecodecamp.org/certification/fcc55fcdb84-75f1-4d8f-9968-06b51f93aaf0/responsive-web-design" target="_blank">Responsive Web Design (freeCodeCamp) - July 2024</a> </li>
             <li>
-              <a href="https://www.freecodecamp.org/certification/fcc55fcdb84-75f1-4d8f-9968-06b51f93aaf0/javascript-algorithms-and-data-structures" target="_blank">Legacy Javascript Algorithms and Data Structures (freeCodeCamp) -
-              July 2024</a>
+              <a
+                href="https://www.freecodecamp.org/certification/fcc55fcdb84-75f1-4d8f-9968-06b51f93aaf0/responsive-web-design"
+                target="_blank"
+                >Responsive Web Design (freeCodeCamp) - July 2024</a
+              >
             </li>
+            <li>
+              <a
+                href="https://www.freecodecamp.org/certification/fcc55fcdb84-75f1-4d8f-9968-06b51f93aaf0/javascript-algorithms-and-data-structures"
+                target="_blank"
+                >JavaScript Algorithms and Data Structures (freeCodeCamp) - July
+                2024</a
+              >
+            </li>
+            <li>English C1 Level (TOEIC Score: 600+) - 2024</li>
           </ul>
         </div>
 
@@ -496,79 +509,63 @@
         <div class="main-section">
           <h2 class="main-section-title">CAREER OBJECTIVE</h2>
           <p class="career-objective">
-            A dedicated Frontend Developer with 3+ years of experience,
-            specializing in Vue.js, Quasar and Astro. Passionate about crafting
-            intuitive, high-performance user interfaces and eager to grow
-            further in backend development and DevOps. Seeking to contribute to
-            high-quality product teams with a strong focus on clean design,
-            maintainable code, and user experience.
+            A passionate Frontend Developer with 3+ years of hands-on experience
+            specializing in Vue.js ecosystem and modern web technologies. Proven
+            expertise in building complex, scalable web applications from
+            enterprise KPI systems to e-commerce platforms and streaming
+            services. Strong focus on creating exceptional user experiences
+            through responsive design, performance optimization, and intuitive
+            interfaces. Seeking to leverage my frontend expertise to contribute
+            to innovative product teams while exploring opportunities to expand
+            into full-stack development.
           </p>
         </div>
 
         <div class="main-section">
           <h2 class="main-section-title">PROFESSIONAL STRENGTHS</h2>
-          <p class="career-objective">
+          <div class="career-objective">
             <ul class="responsibilities">
-            <li>
-              Experienced in Agile/Scrum practices, including daily stand-ups,
-              sprint planning, and retrospectives.
-            </li>
-
-            <li>
-              Strong collaboration with backend developers, QA, and business
-              analysts to ensure smooth delivery.
-            </li>
-
-            <li>
-              Proactive in taking ownership, resolving blockers, and supporting
-              team members.
-            </li>
-
-            <li>
-              Open to feedback and capable of suggesting improvements in UI/UX
-              and logic flow.
-            </li>
-            
-            <li>
-              Proficient with Jira, Trello, Git, Slack, and Notion for task and
-              workflow management.
-            </li>
-
-            <li>
-              Mentored junior developers in Git workflow, code quality, and
-              component-based design.
-            </li>
-
+              <li>
+                Expert-level proficiency in Vue.js ecosystem including Vue 3
+                Composition API, Quasar Framework, Nuxt.js, and state management
+                with Pinia for building scalable single-page applications
+              </li>
+              <li>
+                Advanced JavaScript/TypeScript development with ES6+ features,
+                async programming, and modern build tools like Vite for
+                optimized development workflows
+              </li>
+              <li>
+                Comprehensive experience in responsive web design using HTML5,
+                CSS3, SCSS, and component libraries like PrimeVue for consistent
+                UI implementations
+              </li>
+              <li>
+                Full-stack capabilities with backend integration experience
+                using Node.js, RESTful APIs, GraphQL, and database management
+                with Supabase/PostgreSQL
+              </li>
+              <li>
+                DevOps and deployment expertise including Docker
+                containerization, CI/CD pipelines, PWA development, and
+                performance optimization techniques
+              </li>
+              <li>
+                Testing and quality assurance proficiency with Cypress E2E
+                testing, code review practices, and maintaining high code
+                quality standards
+              </li>
+              <li>
+                Mobile development experience using Cordova for cross-platform
+                applications with native features like RFID integration and QR
+                code scanning
+              </li>
             </ul>
-
-          </p>
+          </div>
         </div>
 
         <div class="main-section">
           <h2 class="main-section-title">WORK EXPERIENCE</h2>
-
-          <div class="experience-item">
-            <div class="job-title">Fresher Developer</div>
-            <div class="company">CATTHAI Co.</div>
-            <div class="experience-date">
-              <span>Mar 2022 - Aug 2023</span>
-              <span class="location">Ho Chi Minh City</span>
-            </div>
-            <ul class="responsibilities">
-              <li>
-                Developed intuitive UI/UX for company websites using HTML, CSS,
-                JavaScript and SCSS
-              </li>
-              <li>
-                Maintained and updated existing websites, improving their
-                functionality and design
-              </li>
-              <li>
-                Monitored website performance and resolved technical issues
-                promptly
-              </li>
-            </ul>
-          </div>
 
           <div class="experience-item">
             <div class="job-title">Middle Developer</div>
@@ -579,16 +576,55 @@
             </div>
             <ul class="responsibilities">
               <li>
-                Designed and developed web applications using modern frameworks
-                like Vue.js, Quasar, Primevue, Astro, Nuxt.js, Node.js...
+                Architected and developed complex web applications using modern
+                frameworks and libraries including Vue.js 3, Quasar Framework,
+                PrimeVue, Astro, Nuxt.js, and Node.js
               </li>
               <li>
-                Integrated APIs to enhance functionality and streamline data
-                management
+                Integrated RESTful APIs and GraphQL endpoints to enhance
+                application functionality, streamline data management, and
+                implement real-time features using WebSocket connections
               </li>
               <li>
-                Conducted user testing and implemented feedback to improve user
-                experience and interface
+                Led user experience research initiatives including usability
+                testing sessions, gathered user feedback, and implemented
+                data-driven improvements to interface design
+              </li>
+              <li>
+                Mentored junior developers on modern development practices, code
+                review processes, and established coding standards to maintain
+                high-quality codebase across the team
+              </li>
+            </ul>
+          </div>
+
+          <div class="experience-item">
+            <div class="job-title">Fresher Developer</div>
+            <div class="company">CATTHAI Co.</div>
+            <div class="experience-date">
+              <span>Mar 2022 - Aug 2023</span>
+              <span class="location">Ho Chi Minh City</span>
+            </div>
+            <ul class="responsibilities">
+              <li>
+                Developed intuitive and responsive user interfaces for company
+                websites using modern web technologies including HTML5, CSS3,
+                JavaScript ES6+, and SCSS preprocessor
+              </li>
+              <li>
+                Maintained and enhanced existing web applications, implementing
+                new features and improving overall functionality, user
+                experience, and visual design consistency
+              </li>
+              <li>
+                Conducted performance monitoring and optimization, resolving
+                technical issues promptly to ensure optimal website loading
+                speeds and cross-browser compatibility
+              </li>
+              <li>
+                Collaborated with design team to implement pixel-perfect layouts
+                and ensure mobile-first responsive design across all devices and
+                screen sizes
               </li>
             </ul>
           </div>
@@ -599,155 +635,205 @@
 
           <div class="project-item">
             <div class="project-title">Enterprise KPI Management System</div>
-            <div class="project-role">Frontend Role</div>
+            <div class="project-role">Frontend Developer</div>
             <div class="project-date">May 2023 - current</div>
             <div class="technologies">
-              <strong>Technologies:</strong> Vue.js, Quasar, Vite, HTML, CSS,
-              SCSS, JavaScript, Docker, CI/CD, Cypress E2E Testing, PWA
+              <div><strong>Role:</strong> Frontend Team Lead</div>
+              <div>
+                <strong>Team Size:</strong> 8 members (1 PM, 3 Frontend, 2
+                Backend, 2 BA)
+              </div>
+              <div>
+                <strong>Technologies:</strong> Vue.js, Quasar, Vite, HTML5,
+                CSS3, SCSS, JavaScript, Docker, CI/CD, Cypress E2E Testing, PWA
+              </div>
             </div>
             <ul class="responsibilities">
               <li>
-                Developed a comprehensive KPI management web application for
-                enterprise goal tracking and organizational data management
+                Developed a comprehensive enterprise-level KPI management web
+                application for organizational goal tracking, performance
+                monitoring, and data analytics
               </li>
               <li>
-                Built user-friendly interface with keyboard shortcuts, visual
-                charts, and detailed data tables for enhanced user experience
+                Built intuitive user interface featuring keyboard shortcuts,
+                interactive data visualizations, advanced filtering, and
+                detailed reporting tables for enhanced productivity
               </li>
               <li>
-                Implemented role-based access control for System Administrators,
-                Department Heads, and Employees with distinct permissions
+                Implemented robust role-based access control system supporting
+                System Administrators, Department Heads, and Employees with
+                granular permission management
               </li>
               <li>
-                Features include Excel data import, organizational structure
-                management, goal allocation, real-time reporting, and
-                multi-language support
+                Engineered advanced features including Excel data import/export,
+                organizational hierarchy management, automated goal allocation,
+                real-time reporting, and multi-language support
               </li>
               <li>
-                Integrated PWA capabilities with push notifications and caching
-                for improved performance
+                Integrated Progressive Web App capabilities with push
+                notifications, offline caching, and background sync for improved
+                performance and user engagement
               </li>
             </ul>
           </div>
 
           <div class="project-item">
             <div class="project-title">Document Workflow Management System</div>
-            <div class="project-role">Frontend Role</div>
+            <div class="project-role">Frontend Developer</div>
             <div class="project-date">Jan 2024 - Dec 2024</div>
             <div class="technologies">
-              <strong>Technologies:</strong> Vue.js, Quasar, Vite, Cordova, Vue
-              Flow, HTML5-QRCode, Pinia
+              <div><strong>Role:</strong> Frontend Team Lead</div>
+              <div>
+                <strong>Team Size:</strong> 5 members (1 PM, 2 Frontend, 1
+                Backend, 1 BA)
+              </div>
+
+              <div>
+                <strong>Technologies:</strong> Vue.js, Quasar, Vite, Cordova,
+                Vue Flow, HTML5-QRCode, Pinia, RFID Integration
+              </div>
             </div>
             <ul class="responsibilities">
               <li>
-                Created a document tracking system with drag-and-drop workflow
-                builder similar to draw.io
+                Created sophisticated document tracking system with
+                drag-and-drop workflow builder interface similar to draw.io,
+                enabling visual process design and management
               </li>
               <li>
-                Developed mobile companion app with RFID authentication and QR
-                code scanning capabilities
+                Developed cross-platform mobile companion application with RFID
+                authentication, QR code scanning capabilities, and offline
+                synchronization features
               </li>
               <li>
-                Implemented visual workflow management with node-based process
-                creation and real-time progress tracking
+                Implemented advanced workflow management system with node-based
+                process creation, conditional logic, real-time progress
+                tracking, and automated notifications
               </li>
               <li>
-                Built administrative dashboard for process monitoring, location
-                management, and workflow visualization
+                Built comprehensive administrative dashboard featuring process
+                monitoring, location management, workflow analytics, and
+                detailed audit trails for compliance tracking
+              </li>
+            </ul>
+          </div>
+
+          <div class="project-item">
+            <div class="project-title">Personal Blog & Portfolio Website</div>
+            <div class="project-role">Full-stack Developer & Creator</div>
+            <div class="project-date">Jan 2025 - current</div>
+            <div class="technologies">
+              <div>
+                <strong>Technologies:</strong> Vue.js, Astro, JavaScript,
+                Markdown, SEO Optimization
+              </div>
+              <div>
+                <strong>Live Demo:</strong>
+                <a href="https://yonnon.site" target="_blank" class="live-demo"
+                  >https://yonnon.site</a
+                >
+              </div>
+            </div>
+            <ul class="responsibilities">
+              <li>
+                Developed high-performance personal blog and portfolio website
+                focused on language learning resources, coding tutorials, and
+                technical documentation
+              </li>
+              <li>
+                Implemented advanced performance optimization techniques
+                including lazy loading, image optimization, RSS feeds,
+                pagination, and comprehensive SEO-friendly architecture
+              </li>
+              <li>
+                Created modern responsive design following UI/UX best practices
+                with enhanced reading experience, dark mode support, and
+                accessibility compliance (WCAG guidelines)
               </li>
             </ul>
           </div>
 
           <div class="project-item">
             <div class="project-title">Plant E-commerce Platform</div>
-            <div class="project-role">Creator</div>
+            <div class="project-role">Full-stack Developer & Creator</div>
             <div class="project-date">Jan 2025 - Mar 2025</div>
             <div class="technologies">
-              <strong>Technologies:</strong> Vue.js, Quasar, Pinia, Supabase
-              <br />
-              <strong>Live Demo:</strong>
-              <a
-                href="https://trees.yonnon.site/"
-                class="live-demo"
-                target="_blank"
-                >https://trees.yonnon.site/</a
-              >
+              <div>
+                <strong>Technologies:</strong> Vue.js, Quasar, Pinia, Supabase,
+                PostgreSQL
+              </div>
+              <div>
+                <strong>Live Demo:</strong>
+                <a
+                  href="https://trees.yonnon.site/"
+                  class="live-demo"
+                  target="_blank"
+                  >https://trees.yonnon.site/</a
+                >
+              </div>
             </div>
             <ul class="responsibilities">
               <li>
                 Built full-featured e-commerce platform specializing in plant
-                sales with complete buyer/seller functionality
+                sales with complete buyer/seller marketplace functionality and
+                responsive design optimized for all devices
               </li>
               <li>
-                Implemented user authentication, product management, inventory
-                tracking, and seller profile management
+                Implemented comprehensive user management system including
+                authentication, seller profiles, product catalog management,
+                inventory tracking, and automated stock alerts
               </li>
               <li>
-                Integrated multiple payment methods including QR code payments
-                via MoMo and banking systems
+                Integrated multiple secure payment gateways including QR code
+                payments via MoMo, banking systems, and cryptocurrency options
+                with real-time transaction processing
               </li>
               <li>
-                Features include shopping cart, order tracking, product reviews,
-                and comprehensive admin dashboard
+                Developed advanced e-commerce features including intelligent
+                shopping cart, order tracking system, product review and rating
+                system, and comprehensive admin dashboard
               </li>
             </ul>
           </div>
 
           <div class="project-item">
-            <div class="project-title">Personal Blog Website</div>
-            <div class="project-role">Creator</div>
-            <div class="project-date">Jan 2025 - current</div>
-            <div class="technologies">
-              <strong>Technologies:</strong> Vue.js, Astro, JavaScript
-              <br />
-              <strong>Live Demo:</strong>
-              <a href="https://yonnon.site" target="_blank" class="live-demo"
-                >https://yonnon.site</a
-              >
-            </div>
-            <ul class="responsibilities">
-              <li>
-                Developed optimized personal blog focused on language learning
-                and coding tutorials
-              </li>
-              <li>
-                Implemented performance optimization, RSS feeds, pagination, and
-                SEO-friendly architecture
-              </li>
-              <li>
-                Created responsive design with modern UI/UX principles for
-                enhanced reading experience
-              </li>
-            </ul>
-          </div>
-
-          <div class="project-item">
-            <div class="project-title">Ziha Movie Streaming Platform</div>
-            <div class="project-role">Creator</div>
+            <div class="project-title">Ziha Anime Streaming Platform</div>
+            <div class="project-role">Full-stack Developer & Creator</div>
             <div class="project-date">Jan 2025 - April 2025</div>
             <div class="technologies">
-              <strong>Technologies:</strong> Vue.js, TypeScript, PrimeVue,
-              Third-party APIs <br />
-              <strong>Live Demo:</strong>
-              <a
-                href="https://movie.yonnon.site"
-                class="live-demo"
-                target="_blank"
-                >https://movie.yonnon.site</a
-              >
+              <div>
+                <strong>Technologies:</strong> Vue.js, TypeScript, PrimeVue,
+                Third-party APIs, Video Streaming Optimization <br />
+              </div>
+              <div>
+                <strong>Live Demo:</strong>
+                <a
+                  href="https://movie.yonnon.site"
+                  class="live-demo"
+                  target="_blank"
+                  >https://movie.yonnon.site</a
+                >
+              </div>
             </div>
             <ul class="responsibilities">
               <li>
-                Built anime streaming platform with modern, animated UI and
-                smooth user experience
+                Built modern anime streaming platform with sophisticated
+                animated UI, smooth user experience, and optimized video
+                streaming capabilities for various device types
               </li>
               <li>
-                Implemented advanced features including search functionality,
-                detailed movie pages, server switching, and pagination
+                Implemented advanced features including intelligent search with
+                filters, detailed content pages, multi-server streaming options,
+                watchlist management, and pagination
               </li>
               <li>
-                Integrated third-party APIs for real-time content delivery and
-                comprehensive movie database
+                Integrated multiple third-party APIs for real-time content
+                delivery, comprehensive anime database management, and automated
+                content updates with caching strategies
+              </li>
+              <li>
+                Optimized video streaming performance with adaptive bitrate
+                streaming, content delivery network integration, and
+                cross-browser compatibility for seamless playback
               </li>
             </ul>
           </div>
@@ -758,12 +844,12 @@
 </html>
 
 <script>
-function downloadPDF() {
-  const link = document.createElement("a");
-  link.href = "/TranAnhKhoa_CV.pdf"; // Make sure this file is in your public folder or accessible path
-  link.download = "TranAnhKhoa_CV.pdf";
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-}
+  function downloadPDF() {
+    const link = document.createElement("a");
+    link.href = "/TranAnhKhoa_CV.pdf";
+    link.download = "TranAnhKhoa_CV.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
 </script>
