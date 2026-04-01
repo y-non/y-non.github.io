@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -133,24 +133,6 @@
         color: #666;
       }
 
-      .contact-info li::before {
-        content: "📧";
-        font-size: 0.8em;
-      }
-
-      .contact-info li:nth-child(2)::before {
-        content: "📱";
-      }
-      .contact-info li:nth-child(3)::before {
-        content: "📍";
-      }
-      .contact-info li:nth-child(4)::before {
-        content: "🔗";
-      }
-      .contact-info li:nth-child(5)::before {
-        content: "💻";
-      }
-
       .education-item {
         margin-bottom: 15px;
       }
@@ -175,11 +157,6 @@
         display: flex;
         align-items: center;
         gap: 5px;
-      }
-
-      .date-location::before {
-        content: "📅";
-        font-size: 0.7em;
       }
 
       .skills-section {
@@ -304,19 +281,15 @@
         gap: 5px;
       }
 
-      .experience-date::before {
-        content: "📅";
-        font-size: 0.7em;
-      }
-
       .experience-date .location {
         margin-left: auto;
+        display: flex;
+        align-items: center;
+        gap: 2px;
       }
 
-      .experience-date .location::before {
-        content: "📍";
-        margin-right: 3px;
-        font-size: 0.7em;
+      .experience-date .location > span {
+        margin-bottom: 1.5px;
       }
 
       .responsibilities {
@@ -324,7 +297,7 @@
       }
 
       .responsibilities li {
-        font-size: 0.9em;
+        font-size: 15px;
         color: #555;
         margin-bottom: 4px;
         padding-left: 12px;
@@ -346,11 +319,6 @@
         display: flex;
         align-items: center;
         gap: 5px;
-      }
-
-      .project-date::before {
-        content: "📅";
-        font-size: 0.7em;
       }
 
       .technologies {
@@ -436,19 +404,80 @@
           <h2 class="section-title">CONTACT INFO</h2>
           <ul class="contact-info">
             <li>
+              <!-- Email -->
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z"
+                />
+              </svg>
               <a href="mailto:trankhoadev@gmail.com">trankhoadev@gmail.com</a>
             </li>
-            <li><a href="tel:+84395364898">+84 39 536 4898</a></li>
-            <li>Ho Chi Minh City</li>
+
             <li>
+              <!-- Phone -->
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M6.6 10.8C8.3 14.1 10.9 16.7 14.2 18.4L16.8 15.8C17.1 15.5 17.5 15.4 17.9 15.5C19.2 15.9 20.6 16.1 22 16.1C22.6 16.1 23 16.5 23 17.1V22C23 22.6 22.6 23 22 23C10.4 23 1 13.6 1 2C1 1.4 1.4 1 2 1H6.9C7.5 1 7.9 1.4 7.9 2C7.9 3.4 8.1 4.8 8.5 6.1C8.6 6.5 8.5 6.9 8.2 7.2L6.6 10.8Z"
+                />
+              </svg>
+              <a href="tel:+84395364898">+84 39 536 4898</a>
+            </li>
+
+            <li>
+              <!-- Location -->
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z"
+                />
+              </svg>
+              Ho Chi Minh City
+            </li>
+
+            <li>
+              <!-- LinkedIn -->
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19ZM8.34 17V10.5H6.13V17H8.34ZM7.24 9.56A1.28 1.28 0 1 0 7.24 7 1.28 1.28 0 0 0 7.24 9.56ZM17.87 17V13.2C17.87 11.13 16.77 10.16 15.31 10.16C14.17 10.16 13.66 10.8 13.36 11.25V10.5H11.15V17H13.36V13.36C13.36 12.41 13.7 11.48 14.76 11.48C15.8 11.48 15.81 12.46 15.81 13.42V17H17.87Z"
+                />
+              </svg>
               <a href="https://www.linkedin.com/in/yonnon/" target="_blank"
-                >https://www.linkedin.com/in/yonnon/</a
+                >LinkedIn</a
               >
             </li>
+
             <li>
-              <a href="https://github.com/y-non" target="_blank"
-                >https://github.com/y-non</a
+              <!-- GitHub -->
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="currentColor"
               >
+                <path
+                  d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.94c.57.1.78-.25.78-.56v-2.17c-3.2.7-3.87-1.54-3.87-1.54-.52-1.3-1.27-1.65-1.27-1.65-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.67 1.25 3.32.96.1-.74.4-1.25.72-1.54-2.55-.29-5.23-1.27-5.23-5.66 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.18 1.17a10.96 10.96 0 0 1 5.8 0c2.21-1.48 3.18-1.17 3.18-1.17.62 1.58.23 2.75.11 3.04.73.8 1.18 1.82 1.18 3.07 0 4.4-2.68 5.37-5.24 5.65.41.36.77 1.08.77 2.17v3.21c0 .31.21.67.79.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"
+                />
+              </svg>
+              <a href="https://github.com/y-non" target="_blank">GitHub</a>
             </li>
           </ul>
         </div>
@@ -461,6 +490,16 @@
               Industrial University of Ho Chi Minh City
             </div>
             <div class="date-location">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M19 4H18V2H16V4H8V2H6V4H5C3.9 4 3 4.9 3 6V20C3 21.1 3.9 22 5 22H19C20.1 22 21 21.1 21 20V6C21 4.9 20.1 4 19 4ZM19 20H5V9H19V20ZM5 7V6H19V7H5Z"
+                />
+              </svg>
               <span>Sep 2019 - Oct 2024</span>
             </div>
           </div>
@@ -536,15 +575,13 @@
         <div class="main-section">
           <h2 class="main-section-title">CAREER OBJECTIVE</h2>
           <p class="career-objective">
-            A passionate Frontend Developer with 3+ years of hands-on experience
-            specializing in Vue.js ecosystem and modern web technologies. Proven
-            expertise in building complex, scalable web applications from
-            enterprise KPI systems to e-commerce platforms and streaming
-            services. Strong focus on creating exceptional user experiences
-            through responsive design, performance optimization, and intuitive
-            interfaces. Seeking to leverage my frontend expertise to contribute
-            to innovative product teams while exploring opportunities to expand
-            into full-stack development.
+            Frontend Engineer with almost 4 years of experience building
+            scalable, high-performance web applications across enterprise SaaS,
+            AI-powered platforms and KPI systems. Proficient in the Vue.js
+            ecosystem with a strong focus on clean architecture, user
+            experience, and cross-team collaboration. Currently contributing to
+            AI-native real estate solutions at a global product company, with a
+            drive to grow toward full-stack development and product ownership.
           </p>
         </div>
 
@@ -593,65 +630,120 @@
 
         <div class="main-section">
           <h2 class="main-section-title">WORK EXPERIENCE</h2>
-
+          <!-- Moatable / Lofty -->
           <div class="experience-item">
-            <div class="job-title">Middle Developer</div>
-            <div class="company">CATTHAI Co.</div>
+            <div class="job-title">Frontend Engineer</div>
+            <div class="company">Moatable – Lofty Team</div>
             <div class="experience-date">
-              <span>Aug 2023 - current</span>
-              <span class="location">Ho Chi Minh City</span>
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M19 4H18V2H16V4H8V2H6V4H5C3.9 4 3 4.9 3 6V20C3 21.1 3.9 22 5 22H19C20.1 22 21 21.1 21 20V6C21 4.9 20.1 4 19 4ZM19 20H5V9H19V20ZM5 7V6H19V7H5Z"
+                />
+              </svg>
+              <span>May 2025 – Present</span>
+              <div class="location">
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z"
+                  />
+                </svg>
+                <span> Ho Chi Minh City </span>
+              </div>
             </div>
             <ul class="responsibilities">
               <li>
-                Architected and developed complex web applications using modern
-                frameworks and libraries including Vue.js 3, Quasar Framework,
-                PrimeVue, Astro, Nuxt.js, and Node.js
+                Joined the Lofty product team — an AI-powered all-in-one
+                platform for real estate professionals — within Moatable's
+                portfolio of AI-native SaaS solutions.
               </li>
               <li>
-                Integrated RESTful APIs and GraphQL endpoints to enhance
-                application functionality, streamline data management, and
-                implement real-time features using WebSocket connections
+                Collaborated daily with Vietnamese and Chinese cross-functional
+                teams (PM, Design, QA, BE, DevOps) in an Agile workflow,
+                delivering features aligned with detailed PRDs and full product
+                flows.
               </li>
               <li>
-                Led user experience research initiatives including usability
-                testing sessions, gathered user feedback, and implemented
-                data-driven improvements to interface design
+                Contributed to the <strong>Smart Plan</strong> feature: a
+                marketing automation workflow engine enabling agents to build,
+                schedule, and manage automated follow-up sequences (emails,
+                texts, tasks, reminders) triggered by lead behavior and custom
+                criteria.
               </li>
               <li>
-                Mentored junior developers on modern development practices, code
-                review processes, and established coding standards to maintain
-                high-quality codebase across the team
+                Involved in <strong>Lofty AI</strong> feature development —
+                spanning Sales Agent, AI Workflow, Homeowner Agent, and Agent
+                Studio — helping automate lead nurturing, social media
+                management, and custom AI agent deployment for real estate
+                professionals.
+              </li>
+              <li>
+                Authored developer documentation and AI training materials;
+                guided the AI tooling on codebase conventions and project
+                workflows to support AI-assisted development.
               </li>
             </ul>
           </div>
 
           <div class="experience-item">
-            <div class="job-title">Fresher Developer</div>
+            <div class="job-title">Middle Developer</div>
             <div class="company">CATTHAI Co.</div>
             <div class="experience-date">
-              <span>Mar 2022 - Aug 2023</span>
-              <span class="location">Ho Chi Minh City</span>
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M19 4H18V2H16V4H8V2H6V4H5C3.9 4 3 4.9 3 6V20C3 21.1 3.9 22 5 22H19C20.1 22 21 21.1 21 20V6C21 4.9 20.1 4 19 4ZM19 20H5V9H19V20ZM5 7V6H19V7H5Z"
+                />
+              </svg>
+              <span>Mar 2022 - May 2025</span>
+              <div class="location">
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z"
+                  />
+                </svg>
+                <span> Ho Chi Minh City </span>
+              </div>
             </div>
             <ul class="responsibilities">
               <li>
-                Developed intuitive and responsive user interfaces for company
-                websites using modern web technologies including HTML5, CSS3,
-                JavaScript ES6+, and SCSS preprocessor
+                Progressed from Fresher to Middle Developer, leading frontend
+                development across multiple enterprise web applications using
+                Vue.js 3, Quasar, Nuxt.js, Astro, PrimeVue, and Node.js.
               </li>
               <li>
-                Maintained and enhanced existing web applications, implementing
-                new features and improving overall functionality, user
-                experience, and visual design consistency
+                Architected and led the frontend of an enterprise KPI management
+                system — delivering role-based access control, Excel
+                import/export, real-time dashboards, PWA with offline support,
+                and Cypress E2E test coverage.
               </li>
               <li>
-                Conducted performance monitoring and optimization, resolving
-                technical issues promptly to ensure optimal website loading
-                speeds and cross-browser compatibility
+                Integrated RESTful APIs, GraphQL endpoints, and WebSocket
+                connections; maintained high performance and cross-browser
+                compatibility across all delivered products.
               </li>
               <li>
-                Collaborated with design team to implement pixel-perfect layouts
-                and ensure mobile-first responsive design across all devices and
-                screen sizes
+                Mentored junior developers through code reviews, established
+                team coding standards, and drove UX improvements informed by
+                usability testing and user feedback.
               </li>
             </ul>
           </div>
@@ -660,10 +752,77 @@
         <div class="main-section">
           <h2 class="main-section-title">PROJECTS</h2>
 
+          <!-- Lofty -->
+          <div class="project-item">
+            <div class="project-title">
+              Lofty – AI-Powered Real Estate Platform
+            </div>
+            <div class="project-role">Frontend Engineer · Moatable</div>
+            <div class="project-date">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M19 4H18V2H16V4H8V2H6V4H5C3.9 4 3 4.9 3 6V20C3 21.1 3.9 22 5 22H19C20.1 22 21 21.1 21 20V6C21 4.9 20.1 4 19 4ZM19 20H5V9H19V20ZM5 7V6H19V7H5Z"
+                />
+              </svg>
+              <span>May 2025 – Present</span>
+            </div>
+
+            <div class="technologies">
+              <div>
+                <strong>Team Size:</strong> 100+ (cross-region: VN & CN)
+              </div>
+              <div>
+                <strong>Technologies:</strong> Vue.js 2/3, LogicFlow,
+                JavaScript, TypeScript, LESS, RESTful APIs, WebSocket
+              </div>
+              <div>
+                <strong>Website:</strong>
+                <a href="https://lofty.com" target="_blank" class="live-demo"
+                  >lofty.com</a
+                >
+              </div>
+            </div>
+            <ul class="responsibilities">
+              <li>
+                Built and iterated on the <strong>Smart Plan</strong> automation
+                module — a workflow engine for configuring lead nurturing
+                sequences with conditional triggers, multi-channel actions, and
+                real-time enrollment tracking.
+              </li>
+              <li>
+                Contributed to <strong>Lofty AI</strong> features including AI
+                Workflow builder, Agent Studio, and Homeowner Agent — enabling
+                agents to deploy intelligent automations without code.
+              </li>
+              <li>
+                Followed end-to-end product delivery process: PRD review, design
+                handoff, feature implementation, QA coordination, and deployment
+                — maintaining high release quality across sprints.
+              </li>
+            </ul>
+          </div>
+
           <div class="project-item">
             <div class="project-title">Enterprise KPI Management System</div>
-            <div class="project-role">Frontend Developer</div>
-            <div class="project-date">May 2023 - current</div>
+            <div class="project-role">Lead Frontend</div>
+            <div class="project-date">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M19 4H18V2H16V4H8V2H6V4H5C3.9 4 3 4.9 3 6V20C3 21.1 3.9 22 5 22H19C20.1 22 21 21.1 21 20V6C21 4.9 20.1 4 19 4ZM19 20H5V9H19V20ZM5 7V6H19V7H5Z"
+                />
+              </svg>
+              <span> May 2023 - current </span>
+            </div>
             <div class="technologies">
               <div><strong>Role:</strong> Frontend Team Lead</div>
               <div>
@@ -677,9 +836,9 @@
             </div>
             <ul class="responsibilities">
               <li>
-                Developed a comprehensive enterprise-level KPI management web
-                application for organizational goal tracking, performance
-                monitoring, and data analytics
+                Developed a comprehensive enterprise-level KPI management system
+                used in collaboration with a Big4 Company in Vietnam, supporting
+                real-world enterprise performance tracking and analytics
               </li>
               <li>
                 Built intuitive user interface featuring keyboard shortcuts,
@@ -704,7 +863,7 @@
             </ul>
           </div>
 
-          <div class="project-item">
+          <!-- <div class="project-item">
             <div class="project-title">Document Workflow Management System</div>
             <div class="project-role">Frontend Developer</div>
             <div class="project-date">Jan 2024 - Dec 2024</div>
@@ -742,21 +901,33 @@
                 detailed audit trails for compliance tracking
               </li>
             </ul>
-          </div>
+          </div> -->
 
           <div class="project-item">
             <div class="project-title">Personal Blog & Portfolio Website</div>
             <div class="project-role">Full-stack Developer & Creator</div>
-            <div class="project-date">Jan 2025 - current</div>
+            <div class="project-date">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M19 4H18V2H16V4H8V2H6V4H5C3.9 4 3 4.9 3 6V20C3 21.1 3.9 22 5 22H19C20.1 22 21 21.1 21 20V6C21 4.9 20.1 4 19 4ZM19 20H5V9H19V20ZM5 7V6H19V7H5Z"
+                />
+              </svg>
+              <span> Jan 2025 - current </span>
+            </div>
             <div class="technologies">
               <div>
                 <strong>Technologies:</strong> Vue.js, Astro, JavaScript,
-                Markdown, SEO Optimization
+                Markdown, RSS, SEO Optimization
               </div>
               <div>
                 <strong>Live Demo:</strong>
-                <a href="https://yonnon.site" target="_blank" class="live-demo"
-                  >https://yonnon.site</a
+                <a href="https://yonnon.info" target="_blank" class="live-demo"
+                  >yonnon.info</a
                 >
               </div>
             </div>
@@ -779,7 +950,7 @@
             </ul>
           </div>
 
-          <div class="project-item">
+          <!-- <div class="project-item">
             <div class="project-title">Plant E-commerce Platform</div>
             <div class="project-role">Full-stack Developer & Creator</div>
             <div class="project-date">Jan 2025 - Mar 2025</div>
@@ -791,10 +962,10 @@
               <div>
                 <strong>Live Demo:</strong>
                 <a
-                  href="https://trees.yonnon.site/"
+                  href="https://trees.yonnon.info/"
                   class="live-demo"
                   target="_blank"
-                  >https://trees.yonnon.site/</a
+                  >https://trees.yonnon.info/</a
                 >
               </div>
             </div>
@@ -820,9 +991,9 @@
                 system, and comprehensive admin dashboard
               </li>
             </ul>
-          </div>
+          </div> -->
 
-          <div class="project-item">
+          <!-- <div class="project-item">
             <div class="project-title">Ziha Anime Streaming Platform</div>
             <div class="project-role">Full-stack Developer & Creator</div>
             <div class="project-date">Jan 2025 - April 2025</div>
@@ -834,10 +1005,10 @@
               <div>
                 <strong>Live Demo:</strong>
                 <a
-                  href="https://movie.yonnon.site"
+                  href="https://movie.yonnon.info"
                   class="live-demo"
                   target="_blank"
-                  >https://movie.yonnon.site</a
+                  >https://movie.yonnon.info</a
                 >
               </div>
             </div>
@@ -863,7 +1034,7 @@
                 cross-browser compatibility for seamless playback
               </li>
             </ul>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>

@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>陈英科 - 简历</title>
+    <title>言堂 - 简历</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
       * {
@@ -11,18 +11,20 @@
         padding: 0;
         box-sizing: border-box;
       }
+
       a {
         text-decoration: none;
         color: inherit;
       }
+
       body {
-        font-family: "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB",
-          "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         line-height: 1.4;
         color: #333;
         background: #f0f0f0;
         padding: 20px;
       }
+
       .container {
         max-width: 900px;
         margin: 0 auto;
@@ -32,14 +34,17 @@
         grid-template-columns: 300px 1fr;
         min-height: 100vh;
       }
+
       .sidebar {
         background: #f8f4f0;
         padding: 30px 25px;
       }
+
       .main-content {
         padding: 30px;
         background: white;
       }
+
       .download-btn {
         position: fixed;
         top: 20px;
@@ -69,9 +74,11 @@
         content: "📄";
         font-size: 1em;
       }
+
       .header {
         margin-bottom: 30px;
       }
+
       .name {
         font-size: 1.8em;
         font-weight: 700;
@@ -79,6 +86,7 @@
         margin-bottom: 5px;
         line-height: 1.2;
       }
+
       .title {
         background: #ff6b4a;
         color: white;
@@ -89,9 +97,11 @@
         display: inline-block;
         margin-bottom: 20px;
       }
+
       .section {
         margin-bottom: 25px;
       }
+
       .section-title {
         font-size: 1.1em;
         font-weight: 700;
@@ -101,6 +111,7 @@
         align-items: center;
         gap: 8px;
       }
+
       .section-title::before {
         content: "";
         width: 16px;
@@ -108,10 +119,12 @@
         background: #ff6b4a;
         border-radius: 3px;
       }
+
       .contact-info {
         list-style: none;
         font-size: 0.85em;
       }
+
       .contact-info li {
         margin-bottom: 8px;
         display: flex;
@@ -119,37 +132,25 @@
         gap: 8px;
         color: #666;
       }
-      .contact-info li::before {
-        content: "📧";
-        font-size: 0.8em;
-      }
-      .contact-info li:nth-child(2)::before {
-        content: "📱";
-      }
-      .contact-info li:nth-child(3)::before {
-        content: "📍";
-      }
-      .contact-info li:nth-child(4)::before {
-        content: "🔗";
-      }
-      .contact-info li:nth-child(5)::before {
-        content: "💻";
-      }
+
       .education-item {
         margin-bottom: 15px;
       }
+
       .degree {
         font-weight: 600;
         color: #333;
         font-size: 0.9em;
         line-height: 1.3;
       }
+
       .university {
         color: #ff6b4a;
         font-weight: 600;
         font-size: 0.85em;
         margin: 3px 0;
       }
+
       .date-location {
         font-size: 0.8em;
         color: #666;
@@ -157,25 +158,26 @@
         align-items: center;
         gap: 5px;
       }
-      .date-location::before {
-        content: "📅";
-        font-size: 0.7em;
-      }
+
       .skills-section {
         margin-bottom: 20px;
       }
+
       .skills-category {
         margin-bottom: 15px;
       }
+
       .skills-category h4 {
         font-size: 0.9em;
         font-weight: 600;
         color: #333;
         margin-bottom: 8px;
       }
+
       .skills-list {
         list-style: none;
       }
+
       .skills-list li {
         font-size: 0.8em;
         color: #666;
@@ -183,16 +185,19 @@
         padding-left: 12px;
         position: relative;
       }
+
       .skills-list li::before {
         content: "•";
         color: #ff6b4a;
         position: absolute;
         left: 0;
       }
+
       .certifications,
       .activities {
         list-style: none;
       }
+
       .certifications li,
       .activities li {
         font-size: 0.8em;
@@ -201,6 +206,7 @@
         padding-left: 12px;
         position: relative;
       }
+
       .certifications li::before,
       .activities li::before {
         content: "•";
@@ -208,9 +214,11 @@
         position: absolute;
         left: 0;
       }
+
       .main-section {
         margin-bottom: 25px;
       }
+
       .main-section-title {
         font-size: 1.2em;
         font-weight: 700;
@@ -220,6 +228,7 @@
         align-items: center;
         gap: 8px;
       }
+
       .main-section-title::before {
         content: "";
         width: 18px;
@@ -227,22 +236,26 @@
         background: #ff6b4a;
         border-radius: 3px;
       }
+
       .career-objective {
         font-size: 0.9em;
         line-height: 1.5;
         color: #555;
         text-align: justify;
       }
+
       .experience-item,
       .project-item {
         margin-bottom: 20px;
         padding-bottom: 15px;
         border-bottom: 1px solid #eee;
       }
+
       .experience-item:last-child,
       .project-item:last-child {
         border-bottom: none;
       }
+
       .job-title,
       .project-title {
         font-size: 1em;
@@ -250,6 +263,7 @@
         color: #333;
         margin-bottom: 3px;
       }
+
       .company,
       .project-role {
         color: #ff6b4a;
@@ -257,6 +271,7 @@
         font-size: 0.9em;
         margin-bottom: 3px;
       }
+
       .experience-date {
         font-size: 0.8em;
         color: #666;
@@ -265,35 +280,38 @@
         align-items: center;
         gap: 5px;
       }
-      .experience-date::before {
-        content: "📅";
-        font-size: 0.7em;
-      }
+
       .experience-date .location {
         margin-left: auto;
+        display: flex;
+        align-items: center;
+        gap: 2px;
       }
-      .experience-date .location::before {
-        content: "📍";
-        margin-right: 3px;
-        font-size: 0.7em;
+
+      .experience-date .location > span {
+        margin-bottom: 1.5px;
       }
+
       .responsibilities {
         list-style: none;
       }
+
       .responsibilities li {
-        font-size: 0.9em;
+        font-size: 15px;
         color: #555;
         margin-bottom: 4px;
         padding-left: 12px;
         position: relative;
         line-height: 1.4;
       }
+
       .responsibilities li::before {
         content: "•";
         color: #ff6b4a;
         position: absolute;
         left: 0;
       }
+
       .project-date {
         font-size: 0.8em;
         color: #666;
@@ -302,10 +320,7 @@
         align-items: center;
         gap: 5px;
       }
-      .project-date::before {
-        content: "📅";
-        font-size: 0.7em;
-      }
+
       .technologies {
         font-size: 0.8em;
         color: #666;
@@ -313,33 +328,41 @@
         display: flex;
         flex-direction: column;
       }
+
       .technologies strong {
         color: #333;
       }
+
       .live-demo {
         color: #007bff;
         text-decoration: none;
       }
+
       .live-demo:hover {
         text-decoration: underline;
       }
+
       @media print {
         body {
           background: white;
           padding: 0;
         }
+
         .container {
           box-shadow: none;
           max-width: none;
         }
+
         .section {
           break-inside: avoid;
         }
       }
+
       @media (max-width: 768px) {
         .container {
           grid-template-columns: 1fr;
         }
+
         .sidebar {
           background: #f8f4f0;
         }
@@ -347,8 +370,8 @@
 
       .lang-toggle-btn {
         position: fixed;
-        top: 25px;
-        right: 200px;
+        top: 20px;
+        right: 250px;
         background: #4a90e2;
         color: white;
         padding: 10px 15px;
@@ -373,55 +396,130 @@
     <div class="container">
       <div class="sidebar">
         <div class="header">
-          <h1 class="name">陈英科<br />TRAN</h1>
+          <h1 class="name">言堂</h1>
           <div class="title">前端开发工程师</div>
         </div>
+
         <div class="section">
           <h2 class="section-title">联系方式</h2>
           <ul class="contact-info">
             <li>
+              <!-- Email -->
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z"
+                />
+              </svg>
               <a href="mailto:trankhoadev@gmail.com">trankhoadev@gmail.com</a>
             </li>
-            <li><a href="tel:+84395364898">+84 39 536 4898</a></li>
-            <li>胡志明市</li>
+
             <li>
+              <!-- Phone -->
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M6.6 10.8C8.3 14.1 10.9 16.7 14.2 18.4L16.8 15.8C17.1 15.5 17.5 15.4 17.9 15.5C19.2 15.9 20.6 16.1 22 16.1C22.6 16.1 23 16.5 23 17.1V22C23 22.6 22.6 23 22 23C10.4 23 1 13.6 1 2C1 1.4 1.4 1 2 1H6.9C7.5 1 7.9 1.4 7.9 2C7.9 3.4 8.1 4.8 8.5 6.1C8.6 6.5 8.5 6.9 8.2 7.2L6.6 10.8Z"
+                />
+              </svg>
+              <a href="tel:+84395364898">+84 39 536 4898</a>
+            </li>
+
+            <li>
+              <!-- Location -->
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z"
+                />
+              </svg>
+              胡志明市
+            </li>
+
+            <li>
+              <!-- LinkedIn -->
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19ZM8.34 17V10.5H6.13V17H8.34ZM7.24 9.56A1.28 1.28 0 1 0 7.24 7 1.28 1.28 0 0 0 7.24 9.56ZM17.87 17V13.2C17.87 11.13 16.77 10.16 15.31 10.16C14.17 10.16 13.66 10.8 13.36 11.25V10.5H11.15V17H13.36V13.42V17H17.87Z"
+                />
+              </svg>
               <a href="https://www.linkedin.com/in/yonnon/" target="_blank"
-                >https://www.linkedin.com/in/yonnon/</a
+                >领英主页</a
               >
             </li>
+
             <li>
-              <a href="https://github.com/y-non" target="_blank"
-                >https://github.com/y-non</a
+              <!-- GitHub -->
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="currentColor"
               >
+                <path
+                  d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.94c.57.1.78-.25.78-.56v-2.17c-3.2.7-3.87-1.54-3.87-1.54-.52-1.3-1.27-1.65-1.27-1.65-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.67 1.25 3.32.96.1-.74.4-1.25.72-1.54-2.55-.29-5.23-1.27-5.23-5.66 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.18 1.17a10.96 10.96 0 0 1 5.8 0c2.21-1.48 3.18-1.17 3.18-1.17.62 1.58.23 2.75.11 3.04.73.8 1.18 1.82 1.18 3.07 0 4.4-2.68 5.37-5.24 5.65.41.36.77 1.08.77 2.17v3.21c0 .31.21.67.79.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"
+                />
+              </svg>
+              <a href="https://github.com/y-non" target="_blank">GitHub</a>
             </li>
           </ul>
         </div>
+
         <div class="section">
           <h2 class="section-title">教育背景</h2>
           <div class="education-item">
-            <div class="degree">学士学位<br />软件工程专业</div>
+            <div class="degree">本科<br />软件工程</div>
             <div class="university">胡志明市工业大学</div>
             <div class="date-location">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M19 4H18V2H16V4H8V2H6V4H5C3.9 4 3 4.9 3 6V20C3 21.1 3.9 22 5 22H19C20.1 22 21 21.1 21 20V6C21 4.9 20.1 4 19 4ZM19 20H5V9H19V20ZM5 7V6H19V7H5Z"
+                />
+              </svg>
               <span>2019年9月 - 2024年10月</span>
             </div>
           </div>
         </div>
+
         <div class="section">
-          <h2 class="section-title">技能特长</h2>
+          <h2 class="section-title">专业技能</h2>
           <div class="skills-section">
             <div class="skills-category">
-              <h4>专业技能</h4>
+              <h4>综合能力</h4>
               <ul class="skills-list">
-                <li>团队领导与指导</li>
-                <li>敏捷/Scrum开发方法</li>
+                <li>团队带领与人才培养</li>
+                <li>敏捷/Scrum 开发方法论</li>
                 <li>项目管理</li>
-                <li>问题解决</li>
+                <li>问题分析与解决</li>
                 <li>跨部门协作</li>
-                <li>技术演示</li>
-                <li>代码审查与质量保证</li>
+                <li>技术演讲与分享</li>
+                <li>代码审查与质量保障</li>
                 <li>用户体验设计</li>
               </ul>
             </div>
+
             <div class="skills-category">
               <h4>语言能力</h4>
               <ul class="skills-list">
@@ -432,26 +530,28 @@
             </div>
           </div>
         </div>
+
         <div class="section">
-          <h2 class="section-title">资格认证</h2>
+          <h2 class="section-title">证书与认证</h2>
           <ul class="certifications">
             <li>
               <a
                 href="https://www.freecodecamp.org/certification/fcc55fcdb84-75f1-4d8f-9968-06b51f93aaf0/responsive-web-design"
                 target="_blank"
-                >响应式网页设计认证 (freeCodeCamp) - 2024年7月</a
+                >响应式网页设计认证（freeCodeCamp）- 2024年7月</a
               >
             </li>
             <li>
               <a
                 href="https://www.freecodecamp.org/certification/fcc55fcdb84-75f1-4d8f-9968-06b51f93aaf0/javascript-algorithms-and-data-structures"
                 target="_blank"
-                >JavaScript算法与数据结构认证 (freeCodeCamp) - 2024年7月</a
+                >JavaScript 算法与数据结构认证（freeCodeCamp）- 2024年7月</a
               >
             </li>
-            <li>英语C1级别（托业成绩：600+）- 2024年</li>
+            <li>英语 C1 水平（TOEIC 成绩：600+）- 2024年</li>
           </ul>
         </div>
+
         <div class="section">
           <h2 class="section-title">活动经历</h2>
           <ul class="activities">
@@ -459,272 +559,429 @@
           </ul>
         </div>
       </div>
+
       <div class="main-content">
         <button class="download-btn" onclick="downloadPDF()">
-          下载PDF简历
+          下载 PDF 简历
         </button>
 
         <button class="lang-toggle-btn" onclick="toggleLanguage()">
-          <span id="lang-text">EN</span>
+          <span id="lang-text">English</span>
         </button>
 
         <div class="main-section">
-          <h2 class="main-section-title">职业目标</h2>
+          <h2 class="main-section-title">求职意向</h2>
           <p class="career-objective">
-            一名充满热情的前端开发工程师，拥有3年以上Vue.js生态系统和现代Web技术的实战经验。在构建复杂、可扩展的Web应用程序方面具有丰富经验，涵盖企业KPI系统、电商平台和流媒体服务等多个领域。专注于通过响应式设计、性能优化和直观界面创造卓越的用户体验。希望运用我的前端专业技能为创新产品团队做出贡献，同时探索向全栈开发扩展的机会。
+            前端工程师，拥有近四年企业级 SaaS、AI 驱动平台及 KPI 系统等大型 Web
+            应用开发经验。深度掌握 Vue.js
+            生态系统，注重代码架构的清晰性、用户体验及跨团队协作。目前就职于一家全球产品公司，负责
+            AI
+            原生房地产解决方案的开发，同时积极向全栈开发与产品负责人方向成长。
           </p>
         </div>
+
         <div class="main-section">
-          <h2 class="main-section-title">专业优势</h2>
+          <h2 class="main-section-title">核心优势</h2>
           <div class="career-objective">
             <ul class="responsibilities">
               <li>
-                精通Vue.js生态系统，包括Vue 3 Composition
-                API、Quasar框架、Nuxt.js以及使用Pinia进行状态管理，能够构建可扩展的单页应用程序
+                精通 Vue.js 生态系统，包括 Vue 3 Composition API、Quasar
+                Framework、Nuxt.js 及 Pinia 状态管理，擅长构建可扩展的单页应用
               </li>
               <li>
-                高级JavaScript/TypeScript开发能力，熟练掌握ES6+特性、异步编程以及使用Vite等现代构建工具优化开发流程
+                熟练掌握 JavaScript/TypeScript 高级开发，涵盖 ES6+
+                特性、异步编程，及以 Vite 为代表的现代构建工具
               </li>
               <li>
-                全面的响应式网页设计经验，使用HTML5、CSS3、SCSS以及PrimeVue等组件库实现一致的UI界面
+                具备响应式网页设计的全面经验，熟练运用 HTML5、CSS3、SCSS 及
+                PrimeVue 等组件库构建一致的 UI 界面
               </li>
               <li>
-                具备全栈开发能力，拥有后端集成经验，使用Node.js、RESTful
-                APIs、GraphQL以及Supabase/PostgreSQL数据库管理
+                拥有全栈开发能力，熟悉 Node.js、RESTful API、GraphQL 以及基于
+                Supabase/PostgreSQL 的数据库管理
               </li>
               <li>
-                DevOps和部署专业技能，包括Docker容器化、CI/CD流水线、PWA开发和性能优化技术
+                具备 DevOps 与部署经验，包括 Docker 容器化、CI/CD
+                流水线搭建、PWA 开发及性能优化
               </li>
               <li>
-                测试和质量保证专业技能，熟练使用Cypress端到端测试、代码审查实践，维护高代码质量标准
+                熟练运用 Cypress
+                进行端到端测试，具备完善的代码审查实践及高标准代码质量管控意识
               </li>
               <li>
-                移动开发经验，使用Cordova开发跨平台应用程序，集成RFID和二维码扫描等原生功能
+                具有使用 Cordova 进行跨平台移动应用开发的经验，支持 RFID
+                集成与二维码扫描等原生功能
               </li>
             </ul>
           </div>
         </div>
+
         <div class="main-section">
           <h2 class="main-section-title">工作经历</h2>
+          <!-- Moatable / Lofty -->
           <div class="experience-item">
-            <div class="job-title">中级开发工程师</div>
-            <div class="company">CATTHAI有限公司</div>
+            <div class="job-title">前端工程师</div>
+            <div class="company">Moatable – Lofty 团队</div>
             <div class="experience-date">
-              <span>2023年8月 - 至今</span>
-              <span class="location">胡志明市</span>
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M19 4H18V2H16V4H8V2H6V4H5C3.9 4 3 4.9 3 6V20C3 21.1 3.9 22 5 22H19C20.1 22 21 21.1 21 20V6C21 4.9 20.1 4 19 4ZM19 20H5V9H19V20ZM5 7V6H19V7H5Z"
+                />
+              </svg>
+              <span>2025年5月 – 至今</span>
+              <div class="location">
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z"
+                  />
+                </svg>
+                <span> 胡志明市 </span>
+              </div>
             </div>
             <ul class="responsibilities">
               <li>
-                使用现代框架和库架构开发复杂Web应用程序，包括Vue.js
-                3、Quasar框架、PrimeVue、Astro、Nuxt.js和Node.js
+                加入 Moatable 旗下 Lofty 产品团队——一款面向房地产专业人士的 AI
+                一体化平台，属于 Moatable 旗下 AI 原生 SaaS 产品矩阵。
               </li>
               <li>
-                集成RESTful
-                APIs和GraphQL端点以增强应用程序功能，简化数据管理，并使用WebSocket连接实现实时功能
+                每日与越南及中国跨地区团队（产品、设计、测试、后端、运维）在敏捷工作流中紧密协作，依据详细
+                PRD 文档和完整产品流程交付功能。
               </li>
               <li>
-                主导用户体验研究项目，包括可用性测试会议，收集用户反馈，并基于数据驱动改进界面设计
+                参与
+                <strong>Smart Plan</strong>
+                功能开发——一款营销自动化工作流引擎，支持经纪人构建、调度并管理自动化跟进序列（邮件、短信、任务、提醒），并可依据潜客行为及自定义条件触发。
               </li>
               <li>
-                指导初级开发人员掌握现代开发实践、代码审查流程，并制定编码标准以维护团队高质量代码库
+                参与 <strong>Lofty AI</strong> 功能开发，涵盖销售代理、AI
+                工作流、房主代理及 Agent
+                Studio，助力房地产专业人士实现潜客培育、社交媒体管理及自定义 AI
+                智能体的自动化部署。
+              </li>
+              <li>
+                撰写开发文档与 AI 训练材料，指导 AI
+                工具了解代码库规范与项目工作流，助力 AI 辅助开发落地。
               </li>
             </ul>
           </div>
+
           <div class="experience-item">
-            <div class="job-title">初级开发工程师</div>
-            <div class="company">CATTHAI有限公司</div>
+            <div class="job-title">中级开发工程师</div>
+            <div class="company">CATTHAI 有限公司</div>
             <div class="experience-date">
-              <span>2022年3月 - 2023年8月</span>
-              <span class="location">胡志明市</span>
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M19 4H18V2H16V4H8V2H6V4H5C3.9 4 3 4.9 3 6V20C3 21.1 3.9 22 5 22H19C20.1 22 21 21.1 21 20V6C21 4.9 20.1 4 19 4ZM19 20H5V9H19V20ZM5 7V6H19V7H5Z"
+                />
+              </svg>
+              <span>2022年3月 - 2025年5月</span>
+              <div class="location">
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z"
+                  />
+                </svg>
+                <span> 胡志明市 </span>
+              </div>
             </div>
             <ul class="responsibilities">
               <li>
-                使用现代Web技术为公司网站开发直观响应式用户界面，包括HTML5、CSS3、JavaScript
-                ES6+和SCSS预处理器
+                从初级工程师成长为中级开发工程师，主导多个企业级 Web
+                应用的前端开发，技术栈涵盖 Vue.js
+                3、Quasar、Nuxt.js、Astro、PrimeVue 及 Node.js。
               </li>
               <li>
-                维护和改进现有Web应用程序，实现新功能并提升整体功能性、用户体验和视觉设计一致性
+                主导设计并开发企业级 KPI
+                管理系统前端架构，交付内容包括基于角色的访问控制、Excel
+                数据导入/导出、实时数据看板、支持离线功能的 PWA 及 Cypress
+                端到端测试覆盖。
               </li>
               <li>
-                进行性能监控和优化，快速解决技术问题，确保网站最佳加载速度和跨浏览器兼容性
+                集成 RESTful API、GraphQL 接口及 WebSocket
+                连接，保障所有交付产品的高性能运行与跨浏览器兼容性。
               </li>
               <li>
-                与设计团队协作实现像素级完美布局，确保所有设备和屏幕尺寸的移动优先响应式设计
+                通过代码评审指导初级开发人员，建立团队编码规范，并根据可用性测试与用户反馈持续推动用户体验优化。
               </li>
             </ul>
           </div>
         </div>
+
         <div class="main-section">
-          <h2 class="main-section-title">项目经验</h2>
+          <h2 class="main-section-title">项目经历</h2>
+
+          <!-- Lofty -->
           <div class="project-item">
-            <div class="project-title">企业KPI管理系统</div>
-            <div class="project-role">前端开发工程师</div>
-            <div class="project-date">2023年5月 - 至今</div>
+            <div class="project-title">Lofty – AI 驱动房地产平台</div>
+            <div class="project-role">前端工程师 · Moatable</div>
+            <div class="project-date">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M19 4H18V2H16V4H8V2H6V4H5C3.9 4 3 4.9 3 6V20C3 21.1 3.9 22 5 22H19C20.1 22 21 21.1 21 20V6C21 4.9 20.1 4 19 4ZM19 20H5V9H19V20ZM5 7V6H19V7H5Z"
+                />
+              </svg>
+              <span>2025年5月 – 至今</span>
+            </div>
+
             <div class="technologies">
-              <div><strong>职责：</strong>前端团队负责人</div>
+              <div><strong>团队规模：</strong> 100+（跨地区：越南 & 中国）</div>
               <div>
-                <strong>团队规模：</strong
-                >8人（1名项目经理，3名前端，2名后端，2名业务分析师）
+                <strong>技术栈：</strong> Vue.js
+                2/3、LogicFlow、JavaScript、TypeScript、LESS、RESTful
+                API、WebSocket
               </div>
               <div>
-                <strong>技术栈：</strong>Vue.js, Quasar, Vite, HTML5, CSS3,
-                SCSS, JavaScript, Docker, CI/CD, Cypress端到端测试, PWA
+                <strong>官网：</strong>
+                <a href="https://lofty.com" target="_blank" class="live-demo"
+                  >lofty.com</a
+                >
               </div>
             </div>
             <ul class="responsibilities">
               <li>
-                开发综合性企业级KPI管理Web应用程序，用于组织目标跟踪、绩效监控和数据分析
+                开发并持续迭代
+                <strong>Smart Plan</strong>
+                自动化模块——一款用于配置潜客培育序列的工作流引擎，支持条件触发、多渠道动作及实时注册追踪。
               </li>
               <li>
-                构建直观用户界面，包括键盘快捷键、交互式数据可视化、高级筛选和详细报表功能，提升工作效率
+                参与 <strong>Lofty AI</strong> 功能开发，包括 AI
+                工作流构建器、Agent Studio
+                及房主代理，帮助经纪人以无代码方式部署智能自动化。
               </li>
               <li>
-                实现强大的基于角色的访问控制系统，支持系统管理员、部门负责人和员工的细粒度权限管理
-              </li>
-              <li>
-                开发高级功能，包括Excel数据导入/导出、组织层级管理、自动目标分配、实时报告和多语言支持
-              </li>
-              <li>
-                集成渐进式Web应用功能，包括推送通知、离线缓存和后台同步，提升性能和用户参与度
+                全程参与端到端产品交付流程：PRD 评审、设计交接、功能实现、QA
+                协调及版本发布，确保每个迭代周期的高质量输出。
               </li>
             </ul>
           </div>
+
           <div class="project-item">
+            <div class="project-title">企业级 KPI 管理系统</div>
+            <div class="project-role">前端负责人</div>
+            <div class="project-date">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M19 4H18V2H16V4H8V2H6V4H5C3.9 4 3 4.9 3 6V20C3 21.1 3.9 22 5 22H19C20.1 22 21 21.1 21 20V6C21 4.9 20.1 4 19 4ZM19 20H5V9H19V20ZM5 7V6H19V7H5Z"
+                />
+              </svg>
+              <span>2023年5月 - 至今</span>
+            </div>
+            <div class="technologies">
+              <div><strong>担任角色：</strong>前端团队负责人</div>
+              <div>
+                <strong>团队规模：</strong>
+                8人（1名产品经理、3名前端、2名后端、2名业务分析师）
+              </div>
+              <div>
+                <strong>技术栈：</strong>
+                Vue.js、Quasar、Vite、HTML5、CSS3、SCSS、JavaScript、Docker、CI/CD、Cypress
+                端到端测试、PWA
+              </div>
+            </div>
+            <ul class="responsibilities">
+              <li>
+                开发企业级 KPI
+                管理系统，与越南某四大会计师事务所合作落地，支持真实企业场景下的绩效追踪与数据分析
+              </li>
+              <li>
+                构建直观的用户界面，支持键盘快捷键、交互式数据可视化、高级筛选及详细报表功能，有效提升操作效率
+              </li>
+              <li>
+                实现精细化角色权限管理，支持系统管理员、部门负责人及员工等多角色的访问控制
+              </li>
+              <li>
+                开发 Excel
+                数据导入/导出、组织架构管理、目标自动分配、实时报表及多语言支持等高级功能
+              </li>
+              <li>
+                集成 PWA
+                能力，支持推送通知、离线缓存及后台同步，提升系统性能与用户体验
+              </li>
+            </ul>
+          </div>
+
+          <!-- <div class="project-item">
             <div class="project-title">文档工作流管理系统</div>
             <div class="project-role">前端开发工程师</div>
             <div class="project-date">2024年1月 - 2024年12月</div>
             <div class="technologies">
-              <div><strong>职责：</strong>前端团队负责人</div>
+              <div><strong>担任角色：</strong>前端团队负责人</div>
               <div>
-                <strong>团队规模：</strong
-                >5人（1名项目经理，2名前端，1名后端，1名业务分析师）
+                <strong>团队规模：</strong> 5人（1名产品经理、2名前端、1名后端、1名业务分析师）
               </div>
+
               <div>
-                <strong>技术栈：</strong>Vue.js, Quasar, Vite, Cordova, Vue
-                Flow, HTML5-QRCode, Pinia, RFID集成
+                <strong>技术栈：</strong> Vue.js、Quasar、Vite、Cordova、Vue Flow、HTML5-QRCode、Pinia、RFID 集成
               </div>
             </div>
             <ul class="responsibilities">
               <li>
-                创建复杂的文档跟踪系统，具有类似draw.io的拖拽工作流构建器界面，实现可视化流程设计和管理
+                开发文档追踪系统，内置类 draw.io 的拖拽工作流构建界面，支持可视化流程设计与管理
               </li>
               <li>
-                开发跨平台移动配套应用程序，具有RFID身份验证、二维码扫描功能和离线同步特性
+                开发跨平台移动端应用，支持 RFID 身份验证、二维码扫描及离线数据同步功能
               </li>
               <li>
-                实现高级工作流管理系统，包括基于节点的流程创建、条件逻辑、实时进度跟踪和自动通知
+                实现基于节点的流程创建、条件逻辑、实时进度追踪及自动化通知的高级工作流管理系统
               </li>
               <li>
-                构建综合管理仪表板，包括流程监控、位置管理、工作流分析和详细审计跟踪，确保合规性追踪
+                构建综合管理后台，涵盖流程监控、位置管理、工作流分析及详细的合规审计日志
               </li>
             </ul>
-          </div>
+          </div> -->
+
           <div class="project-item">
             <div class="project-title">个人博客与作品集网站</div>
-            <div class="project-role">全栈开发工程师与创建者</div>
-            <div class="project-date">2025年1月 - 至今</div>
+            <div class="project-role">全栈开发者 & 创作者</div>
+            <div class="project-date">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M19 4H18V2H16V4H8V2H6V4H5C3.9 4 3 4.9 3 6V20C3 21.1 3.9 22 5 22H19C20.1 22 21 21.1 21 20V6C21 4.9 20.1 4 19 4ZM19 20H5V9H19V20ZM5 7V6H19V7H5Z"
+                />
+              </svg>
+              <span>2025年1月 - 至今</span>
+            </div>
             <div class="technologies">
               <div>
-                <strong>技术栈：</strong>Vue.js, Astro, JavaScript, Markdown,
-                SEO优化
+                <strong>技术栈：</strong>
+                Vue.js、Astro、JavaScript、Markdown、RSS、SEO 优化
               </div>
               <div>
-                <strong>在线演示：</strong>
-                <a href="https://yonnon.site" target="_blank" class="live-demo"
-                  >https://yonnon.site</a
+                <strong>在线访问：</strong>
+                <a href="https://yonnon.info" target="_blank" class="live-demo"
+                  >yonnon.info</a
                 >
               </div>
             </div>
             <ul class="responsibilities">
               <li>
-                开发高性能个人博客和作品集网站，专注于语言学习资源、编程教程和技术文档
+                开发高性能个人博客与作品集网站，内容聚焦语言学习资源、编程教程及技术文档
               </li>
               <li>
-                实现高级性能优化技术，包括懒加载、图像优化、RSS订阅、分页和全面的SEO友好架构
+                实施多项性能优化，包括懒加载、图片压缩、RSS 订阅、分页及对 SEO
+                友好的全站架构
               </li>
               <li>
-                创建现代响应式设计，遵循UI/UX最佳实践，提供增强的阅读体验、深色模式支持和可访问性合规（WCAG指南）
+                遵循 UI/UX
+                最佳实践，打造现代响应式设计，提供优质阅读体验，支持深色模式及
+                WCAG 无障碍规范
               </li>
             </ul>
           </div>
-          <div class="project-item">
+
+          <!-- <div class="project-item">
             <div class="project-title">植物电商平台</div>
-            <div class="project-role">全栈开发工程师与创建者</div>
+            <div class="project-role">全栈开发者 & 创作者</div>
             <div class="project-date">2025年1月 - 2025年3月</div>
             <div class="technologies">
               <div>
-                <strong>技术栈：</strong>Vue.js, Quasar, Pinia, Supabase,
-                PostgreSQL
+                <strong>技术栈：</strong> Vue.js、Quasar、Pinia、Supabase、PostgreSQL
               </div>
               <div>
-                <strong>在线演示：</strong>
+                <strong>在线访问：</strong>
                 <a
-                  href="https://trees.yonnon.site/"
+                  href="https://trees.yonnon.info/"
                   class="live-demo"
                   target="_blank"
-                  >https://trees.yonnon.site/</a
+                  >https://trees.yonnon.info/</a
                 >
               </div>
             </div>
             <ul class="responsibilities">
               <li>
-                构建功能完整的植物销售专业电商平台，具有完整的买家/卖家市场功能和针对所有设备优化的响应式设计
+                构建全功能植物销售电商平台，涵盖完整的买卖双边市场功能，界面针对各类设备进行响应式优化
               </li>
               <li>
-                实现全面的用户管理系统，包括身份验证、卖家档案、产品目录管理、库存跟踪和自动库存警报
+                实现完整的用户管理体系，包括身份验证、卖家主页、商品目录管理、库存追踪及库存预警自动化
               </li>
               <li>
-                集成多种安全支付网关，包括MoMo二维码支付、银行系统和加密货币选项，具有实时交易处理
+                集成多种安全支付方式，包括 MoMo 二维码支付、银行转账及加密货币支付，支持实时交易处理
               </li>
               <li>
-                开发高级电商功能，包括智能购物车、订单跟踪系统、产品评价和评分系统，以及综合管理仪表板
+                开发购物车、订单追踪、商品评价与评分系统及综合管理后台等电商核心功能
               </li>
             </ul>
-          </div>
-          <div class="project-item">
-            <div class="project-title">Ziha动漫流媒体平台</div>
-            <div class="project-role">全栈开发工程师与创建者</div>
+          </div> -->
+
+          <!-- <div class="project-item">
+            <div class="project-title">Ziha 动漫视频流媒体平台</div>
+            <div class="project-role">全栈开发者 & 创作者</div>
             <div class="project-date">2025年1月 - 2025年4月</div>
             <div class="technologies">
               <div>
-                <strong>技术栈：</strong>Vue.js, TypeScript, PrimeVue,
-                第三方APIs, 视频流优化 <br />
+                <strong>技术栈：</strong> Vue.js、TypeScript、PrimeVue、第三方 API、视频流优化 <br />
               </div>
               <div>
-                <strong>在线演示：</strong>
+                <strong>在线访问：</strong>
                 <a
-                  href="https://movie.yonnon.site"
+                  href="https://movie.yonnon.info"
                   class="live-demo"
                   target="_blank"
-                  >https://movie.yonnon.site</a
+                  >https://movie.yonnon.info</a
                 >
               </div>
             </div>
             <ul class="responsibilities">
               <li>
-                构建现代动漫流媒体平台，具有精美动画UI、流畅用户体验和针对各种设备类型优化的视频流功能
+                开发现代动漫流媒体平台，具备精美动效 UI、流畅的用户体验，并针对多种设备类型优化了视频播放性能
               </li>
               <li>
-                实现高级功能，包括带筛选的智能搜索、详细内容页面、多服务器流媒体选项、观看列表管理和分页
+                实现智能搜索与筛选、内容详情页、多服务器播放选项、收藏列表管理及分页等高级功能
               </li>
               <li>
-                集成多个第三方APIs，实现实时内容交付、全面的动漫数据库管理、自动内容更新和缓存策略
+                对接多个第三方 API，实现实时内容分发、完整的动漫数据库管理及带缓存策略的自动内容更新
               </li>
               <li>
-                优化视频流性能，采用自适应比特率流、内容分发网络集成和跨浏览器兼容性，确保无缝播放
+                通过自适应码率传输、CDN 集成及跨浏览器兼容性优化，提升视频流播放体验的流畅性
               </li>
             </ul>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
   </body>
 </html>
+
 <script>
   // function downloadPDF() {
   //   const link = document.createElement("a");
-  //   link.href = "/陈英科_简历.pdf";
-  //   link.download = "陈英科_简历.pdf";
+  //   link.href = "/TranAnhKhoa_CV.pdf";
+  //   link.download = "TranAnhKhoa_CV.pdf";
   //   document.body.appendChild(link);
   //   link.click();
   //   document.body.removeChild(link);
@@ -748,8 +1005,8 @@
     const currentLang = document.documentElement.lang;
 
     if (currentLang === "zh-CN") {
-      link.href = "/陈英科_简历.pdf";
-      link.download = "陈英科_简历.pdf";
+      link.href = "/言堂_简历.pdf";
+      link.download = "言堂_简历.pdf";
     } else {
       link.href = "/TranAnhKhoa_CV.pdf";
       link.download = "TranAnhKhoa_CV.pdf";
