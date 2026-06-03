@@ -6,6 +6,15 @@
     <title>Tran Anh Khoa - CV</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+      :root {
+        --accent: #0f4c81;
+        --accent-hover: #0a3a6b;
+        --sidebar-bg: #f4f7fc;
+        --shadow: rgba(15, 76, 129, 0.25);
+        --shadow-hover: rgba(15, 76, 129, 0.35);
+      }
+
       * {
         margin: 0;
         padding: 0;
@@ -31,12 +40,12 @@
         background: white;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         display: grid;
-        grid-template-columns: 300px 1fr;
+        grid-template-columns: 260px 1fr;
         min-height: 100vh;
       }
 
       .sidebar {
-        background: #f8f4f0;
+        background: var(--sidebar-bg);
         padding: 30px 25px;
       }
 
@@ -49,7 +58,7 @@
         position: fixed;
         top: 20px;
         right: 20px;
-        background: #ff6b4a;
+        background: var(--accent);
         color: white;
         padding: 10px 20px;
         border: none;
@@ -62,13 +71,13 @@
         gap: 8px;
         transition: all 0.3s ease;
         text-decoration: none;
-        box-shadow: 0 2px 5px rgba(255, 107, 74, 0.3);
+        box-shadow: 0 2px 5px var(--shadow);
         z-index: 10;
       }
       .download-btn:hover {
-        background: #e5593e;
+        background: var(--accent-hover);
         transform: translateY(-2px);
-        box-shadow: 0 4px 15px rgba(255, 107, 74, 0.4);
+        box-shadow: 0 4px 15px var(--shadow-hover);
       }
       .download-btn::before {
         content: "📄";
@@ -88,7 +97,7 @@
       }
 
       .title {
-        background: #ff6b4a;
+        background: var(--accent);
         color: white;
         padding: 8px 15px;
         border-radius: 15px;
@@ -116,7 +125,7 @@
         content: "";
         width: 16px;
         height: 16px;
-        background: #ff6b4a;
+        background: var(--accent);
         border-radius: 3px;
       }
 
@@ -145,7 +154,7 @@
       }
 
       .university {
-        color: #ff6b4a;
+        color: var(--accent);
         font-weight: 600;
         font-size: 0.85em;
         margin: 3px 0;
@@ -188,7 +197,7 @@
 
       .skills-list li::before {
         content: "•";
-        color: #ff6b4a;
+        color: var(--accent);
         position: absolute;
         left: 0;
       }
@@ -210,7 +219,7 @@
       .certifications li::before,
       .activities li::before {
         content: "•";
-        color: #ff6b4a;
+        color: var(--accent);
         position: absolute;
         left: 0;
       }
@@ -233,7 +242,7 @@
         content: "";
         width: 18px;
         height: 18px;
-        background: #ff6b4a;
+        background: var(--accent);
         border-radius: 3px;
       }
 
@@ -266,7 +275,7 @@
 
       .company,
       .project-role {
-        color: #ff6b4a;
+        color: var(--accent);
         font-weight: 600;
         font-size: 0.9em;
         margin-bottom: 3px;
@@ -307,7 +316,7 @@
 
       .responsibilities li::before {
         content: "•";
-        color: #ff6b4a;
+        color: var(--accent);
         position: absolute;
         left: 0;
       }
@@ -342,6 +351,129 @@
         text-decoration: underline;
       }
 
+      /* ── Theme Switcher ── */
+      .theme-switcher {
+        position: fixed;
+        top: 20px;
+        right: 310px;
+        z-index: 10;
+      }
+
+      .theme-btn {
+        background: white;
+        border: 2px solid var(--accent);
+        color: var(--accent);
+        padding: 9px 15px;
+        border-radius: 25px;
+        font-size: 1em;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px var(--shadow);
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .theme-btn:hover {
+        background: var(--accent);
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px var(--shadow-hover);
+      }
+
+      .theme-picker {
+        display: none;
+        position: absolute;
+        top: 48px;
+        right: 0;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 8px 28px rgba(0, 0, 0, 0.15);
+        padding: 10px;
+        min-width: 190px;
+        z-index: 100;
+        border: 1px solid #e8e8e8;
+      }
+
+      .theme-picker.open {
+        display: block;
+        animation: fadeIn 0.15s ease;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-6px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .theme-picker-title {
+        font-size: 0.72em;
+        font-weight: 700;
+        color: #999;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        padding: 4px 8px 8px;
+        border-bottom: 1px solid #f0f0f0;
+        margin-bottom: 6px;
+      }
+
+      .theme-option {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 8px 10px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 0.83em;
+        color: #444;
+        transition: background 0.15s;
+        position: relative;
+      }
+
+      .theme-option:hover {
+        background: #f5f5f5;
+      }
+
+      .theme-option.active {
+        background: #f0f4ff;
+        font-weight: 600;
+        color: #222;
+      }
+
+      .theme-option.active::after {
+        content: "✓";
+        position: absolute;
+        right: 10px;
+        font-size: 0.9em;
+        color: var(--accent);
+      }
+
+      .color-circle {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        flex-shrink: 0;
+        border: 2px solid rgba(0, 0, 0, 0.08);
+      }
+
+      @media print {
+        .theme-switcher {
+          display: none;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .theme-switcher {
+          display: none;
+        }
+      }
+
       @media print {
         body {
           background: white;
@@ -364,14 +496,14 @@
         }
 
         .sidebar {
-          background: #f8f4f0;
+          background: var(--sidebar-bg);
         }
       }
 
       .lang-toggle-btn {
         position: fixed;
         top: 20px;
-        right: 250px;
+        right: 230px;
         background: #4a90e2;
         color: white;
         padding: 10px 15px;
@@ -397,7 +529,7 @@
       <div class="sidebar">
         <div class="header">
           <h1 class="name">ANH KHOA<br />TRAN</h1>
-          <div class="title">Frontend Developer</div>
+          <div class="title">Frontend Engineer</div>
         </div>
 
         <div class="section">
@@ -464,21 +596,6 @@
                 >LinkedIn</a
               >
             </li>
-
-            <li>
-              <!-- GitHub -->
-              <svg
-                width="14"
-                height="14"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-              >
-                <path
-                  d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.94c.57.1.78-.25.78-.56v-2.17c-3.2.7-3.87-1.54-3.87-1.54-.52-1.3-1.27-1.65-1.27-1.65-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.67 1.25 3.32.96.1-.74.4-1.25.72-1.54-2.55-.29-5.23-1.27-5.23-5.66 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.18 1.17a10.96 10.96 0 0 1 5.8 0c2.21-1.48 3.18-1.17 3.18-1.17.62 1.58.23 2.75.11 3.04.73.8 1.18 1.82 1.18 3.07 0 4.4-2.68 5.37-5.24 5.65.41.36.77 1.08.77 2.17v3.21c0 .31.21.67.79.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"
-                />
-              </svg>
-              <a href="https://github.com/y-non" target="_blank">GitHub</a>
-            </li>
           </ul>
         </div>
 
@@ -509,50 +626,51 @@
           <h2 class="section-title">SKILLS</h2>
           <div class="skills-section">
             <div class="skills-category">
-              <h4>Professional Skills</h4>
+              <h4>Frontend</h4>
               <ul class="skills-list">
-                <li>Team Leadership & Mentoring</li>
-                <li>Agile/Scrum Methodologies</li>
-                <li>Project Management</li>
-                <li>Problem Solving</li>
-                <li>Cross-functional Collaboration</li>
-                <li>Technical Presentation</li>
-                <li>Code Review & Quality Assurance</li>
-                <li>User Experience Design</li>
+                <li>Vue.js 2/3, Nuxt.js, Quasar</li>
+                <li>TypeScript, JavaScript (ES6+)</li>
+                <li>Pinia, PrimeVue, Vite</li>
+                <li>HTML5, CSS3, SCSS, LESS</li>
+              </ul>
+            </div>
+
+            <div class="skills-category">
+              <h4>Backend & Data</h4>
+              <ul class="skills-list">
+                <li>Node.js, Express.js</li>
+                <li>RESTful APIs, GraphQL, WebSocket</li>
+                <li>PostgreSQL, Supabase</li>
+              </ul>
+            </div>
+
+            <div class="skills-category">
+              <h4>Testing & DevOps</h4>
+              <ul class="skills-list">
+                <li>Cypress E2E</li>
+                <li>Docker, CI/CD</li>
+                <li>PWA, Service Workers</li>
+              </ul>
+            </div>
+
+            <div class="skills-category">
+              <h4>Tools & Methods</h4>
+              <ul class="skills-list">
+                <li>Git, Jira, Figma</li>
+                <li>Agile / Scrum</li>
+                <li>Code Review, Mentoring</li>
               </ul>
             </div>
 
             <div class="skills-category">
               <h4>Languages</h4>
               <ul class="skills-list">
-                <li>English (Fluent)</li>
-                <li>Chinese (Fluent)</li>
-                <li>Japanese (Basics)</li>
+                <li>English – Professional Working Proficiency</li>
+                <li>Chinese – Professional Working Proficiency</li>
+                <li>Japanese – Basic</li>
               </ul>
             </div>
           </div>
-        </div>
-
-        <div class="section">
-          <h2 class="section-title">CERTIFICATIONS</h2>
-          <ul class="certifications">
-            <li>
-              <a
-                href="https://www.freecodecamp.org/certification/fcc55fcdb84-75f1-4d8f-9968-06b51f93aaf0/responsive-web-design"
-                target="_blank"
-                >Responsive Web Design (freeCodeCamp) - July 2024</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.freecodecamp.org/certification/fcc55fcdb84-75f1-4d8f-9968-06b51f93aaf0/javascript-algorithms-and-data-structures"
-                target="_blank"
-                >JavaScript Algorithms and Data Structures (freeCodeCamp) - July
-                2024</a
-              >
-            </li>
-            <li>English C1 Level (TOEIC Score: 600+) - 2024</li>
-          </ul>
         </div>
 
         <div class="section">
@@ -564,24 +682,71 @@
       </div>
 
       <div class="main-content">
-        <button class="download-btn" onclick="downloadPDF()">
-          Download PDF CV
-        </button>
+        <!-- <div class="main-actions">
+          <button class="download-btn" onclick="downloadPDF()">
+            Download PDF CV
+          </button>
 
-        <button class="lang-toggle-btn" onclick="toggleLanguage()">
-          <span id="lang-text">中文</span>
-        </button>
+          <button class="lang-toggle-btn" onclick="toggleLanguage()">
+            <span id="lang-text">中文</span>
+          </button>
+
+          <div class="theme-switcher">
+            <button
+              class="theme-btn"
+              onclick="toggleThemePicker()"
+              title="Change color theme"
+            >
+              🎨 Theme
+            </button>
+            <div class="theme-picker" id="theme-picker">
+              <div class="theme-picker-title">Color Theme</div>
+              <div
+                class="theme-option active"
+                data-theme="tech-corporate"
+                onclick="applyTheme('tech-corporate')"
+              >
+                <span class="color-circle" style="background: #0f4c81"></span>
+                Tech Corporate
+              </div>
+              <div
+                class="theme-option"
+                data-theme="modern-tech"
+                onclick="applyTheme('modern-tech')"
+              >
+                <span class="color-circle" style="background: #2c3e50"></span>
+                Modern Tech
+              </div>
+              <div
+                class="theme-option"
+                data-theme="minimalist"
+                onclick="applyTheme('minimalist')"
+              >
+                <span class="color-circle" style="background: #008080"></span>
+                Minimalist Luxury
+              </div>
+              <div
+                class="theme-option"
+                data-theme="navy-dark"
+                onclick="applyTheme('navy-dark')"
+              >
+                <span class="color-circle" style="background: #102a43"></span>
+                Navy Dark
+              </div>
+            </div>
+          </div>
+        </div> -->
 
         <div class="main-section">
           <h2 class="main-section-title">CAREER OBJECTIVE</h2>
           <p class="career-objective">
-            Frontend Engineer with almost 4 years of experience building
-            scalable, high-performance web applications across enterprise SaaS,
-            AI-powered platforms and KPI systems. Proficient in the Vue.js
-            ecosystem with a strong focus on clean architecture, user
-            experience, and cross-team collaboration. Currently contributing to
-            AI-native real estate solutions at a global product company, with a
-            drive to grow toward full-stack development and product ownership.
+            Frontend Engineer with nearly 4 years of experience building
+            enterprise SaaS products and AI-powered platforms using Vue.js,
+            TypeScript, and modern frontend technologies. Currently shipping CRM
+            and AI workflow features at Moatable (lofty.com), a global product
+            company with 100+ engineers across Vietnam and China. Focused on
+            writing maintainable, scalable code that ships fast from component
+            architecture to cross-team delivery.
           </p>
         </div>
 
@@ -590,39 +755,27 @@
           <div class="career-objective">
             <ul class="responsibilities">
               <li>
-                Expert-level proficiency in Vue.js ecosystem including Vue 3
-                Composition API, Quasar Framework, Nuxt.js, and state management
-                with Pinia for building scalable single-page applications
+                <strong>Vue.js ecosystem:</strong> Vue 2/3 Composition API,
+                Quasar, Nuxt.js, Pinia, PrimeVue production experience across
+                enterprise-scale SPAs and SSR applications
               </li>
               <li>
-                Advanced JavaScript/TypeScript development with ES6+ features,
-                async programming, and modern build tools like Vite for
-                optimized development workflows
+                <strong>JavaScript/TypeScript:</strong> ES6+, async/await,
+                modular architecture, Vite build tooling comfortable explaining
+                internals, not just using the API
               </li>
               <li>
-                Comprehensive experience in responsive web design using HTML5,
-                CSS3, SCSS, and component libraries like PrimeVue for consistent
-                UI implementations
+                <strong>API integration:</strong> RESTful, GraphQL, WebSocket
+                including real-time features and data-heavy dashboards
               </li>
               <li>
-                Full-stack capabilities with backend integration experience
-                using Node.js, RESTful APIs, GraphQL, and database management
-                with Supabase/PostgreSQL
+                <strong>Testing & DevOps:</strong> Cypress E2E, Docker, CI/CD
+                pipelines, PWA with service workers and offline sync
               </li>
               <li>
-                DevOps and deployment expertise including Docker
-                containerization, CI/CD pipelines, PWA development, and
-                performance optimization techniques
-              </li>
-              <li>
-                Testing and quality assurance proficiency with Cypress E2E
-                testing, code review practices, and maintaining high code
-                quality standards
-              </li>
-              <li>
-                Mobile development experience using Cordova for cross-platform
-                applications with native features like RFID integration and QR
-                code scanning
+                <strong>Cross-functional collaboration:</strong> Agile teams up
+                to 100+ people across VN and CN; PRD-driven delivery, direct QA
+                coordination, and technical mentoring
               </li>
             </ul>
           </div>
@@ -645,7 +798,7 @@
                   d="M19 4H18V2H16V4H8V2H6V4H5C3.9 4 3 4.9 3 6V20C3 21.1 3.9 22 5 22H19C20.1 22 21 21.1 21 20V6C21 4.9 20.1 4 19 4ZM19 20H5V9H19V20ZM5 7V6H19V7H5Z"
                 />
               </svg>
-              <span>May 2025 – Present</span>
+              <span>May 2025 – May 2026</span>
               <div class="location">
                 <svg
                   width="14"
@@ -662,40 +815,39 @@
             </div>
             <ul class="responsibilities">
               <li>
-                Joined the Lofty product team — an AI-powered all-in-one
-                platform for real estate professionals — within Moatable's
-                portfolio of AI-native SaaS solutions.
+                Contributed to the migration of
+                <strong>Smart Plan v2</strong> from a legacy Vue 2 monolith to a
+                Vue 3 node-based drag-and-drop engine (LogicFlow) delivered 2
+                weeks ahead of a strict 2-month deadline, with 100% backward
+                compatibility for all existing enterprise workflow data.
               </li>
               <li>
-                Collaborated daily with Vietnamese and Chinese cross-functional
-                teams (PM, Design, QA, BE, DevOps) in an Agile workflow,
-                delivering features aligned with detailed PRDs and full product
-                flows.
+                Built UI for <strong>Lofty AI</strong> features including AI
+                Workflow builder and Agent Studio tools enabling real estate
+                agents to configure and deploy automated lead nurturing
+                sequences without writing code.
               </li>
               <li>
-                Contributed to the <strong>Smart Plan</strong> feature: a
-                marketing automation workflow engine enabling agents to build,
-                schedule, and manage automated follow-up sequences (emails,
-                texts, tasks, reminders) triggered by lead behavior and custom
-                criteria.
+                Worked in a cross-regional Agile team (VN + CN, 100+ engineers)
+                collaborating with PM, Design, QA, and Backend through full
+                feature lifecycle: PRD review → implementation → QA coordination
+                → release.
               </li>
               <li>
-                Involved in <strong>Lofty AI</strong> feature development —
-                spanning Sales Agent, AI Workflow, Homeowner Agent, and Agent
-                Studio — helping automate lead nurturing, social media
-                management, and custom AI agent deployment for real estate
-                professionals.
-              </li>
-              <li>
-                Authored developer documentation and AI training materials;
-                guided the AI tooling on codebase conventions and project
-                workflows to support AI-assisted development.
+                Maintained code quality through regular reviews; wrote technical
+                documentation to onboard new team members and align AI tooling
+                with codebase conventions.
               </li>
             </ul>
           </div>
 
           <div class="experience-item">
-            <div class="job-title">Middle Developer</div>
+            <div class="job-title">
+              Middle Frontend Developer
+              <span style="font-weight: 400; color: #888; font-size: 0.82em"
+                >(Progressed: Fresher → Junior → Middle)</span
+              >
+            </div>
             <div class="company">CATTHAI Co.</div>
             <div class="experience-date">
               <svg
@@ -725,25 +877,25 @@
             </div>
             <ul class="responsibilities">
               <li>
-                Progressed from Fresher to Middle Developer, leading frontend
-                development across multiple enterprise web applications using
-                Vue.js 3, Quasar, Nuxt.js, Astro, PrimeVue, and Node.js.
+                Led frontend development across multiple enterprise web
+                applications using Vue.js 3, Quasar, Nuxt.js, and Pinia owning
+                architecture decisions and component design from scratch.
               </li>
               <li>
-                Architected and led the frontend of an enterprise KPI management
-                system — delivering role-based access control, Excel
-                import/export, real-time dashboards, PWA with offline support,
-                and Cypress E2E test coverage.
+                Architected and delivered a full-scale KPI management system for
+                a 1,500+ employee enterprise in collaboration with a Big4 firm
+                handling data-dense dashboards with real-time WebSocket updates
+                at sub-second rendering under high mutation rates; included
+                RBAC, Excel import/export, and PWA with offline sync.
               </li>
               <li>
                 Integrated RESTful APIs, GraphQL endpoints, and WebSocket
-                connections; maintained high performance and cross-browser
-                compatibility across all delivered products.
+                connections; wrote Cypress E2E test suites that reduced
+                regression issues by ~40% across releases.
               </li>
               <li>
-                Mentored junior developers through code reviews, established
-                team coding standards, and drove UX improvements informed by
-                usability testing and user feedback.
+                Mentored 3 junior developers through code reviews and
+                established team coding standards adopted across all projects.
               </li>
             </ul>
           </div>
@@ -751,117 +903,6 @@
 
         <div class="main-section">
           <h2 class="main-section-title">PROJECTS</h2>
-
-          <!-- Lofty -->
-          <div class="project-item">
-            <div class="project-title">
-              Lofty – AI-Powered Real Estate Platform
-            </div>
-            <div class="project-role">Frontend Engineer · Moatable</div>
-            <div class="project-date">
-              <svg
-                width="14"
-                height="14"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-              >
-                <path
-                  d="M19 4H18V2H16V4H8V2H6V4H5C3.9 4 3 4.9 3 6V20C3 21.1 3.9 22 5 22H19C20.1 22 21 21.1 21 20V6C21 4.9 20.1 4 19 4ZM19 20H5V9H19V20ZM5 7V6H19V7H5Z"
-                />
-              </svg>
-              <span>May 2025 – Present</span>
-            </div>
-
-            <div class="technologies">
-              <div>
-                <strong>Team Size:</strong> 100+ (cross-region: VN & CN)
-              </div>
-              <div>
-                <strong>Technologies:</strong> Vue.js 2/3, LogicFlow,
-                JavaScript, TypeScript, LESS, RESTful APIs, WebSocket
-              </div>
-              <div>
-                <strong>Website:</strong>
-                <a href="https://lofty.com" target="_blank" class="live-demo"
-                  >lofty.com</a
-                >
-              </div>
-            </div>
-            <ul class="responsibilities">
-              <li>
-                Built and iterated on the <strong>Smart Plan</strong> automation
-                module — a workflow engine for configuring lead nurturing
-                sequences with conditional triggers, multi-channel actions, and
-                real-time enrollment tracking.
-              </li>
-              <li>
-                Contributed to <strong>Lofty AI</strong> features including AI
-                Workflow builder, Agent Studio, and Homeowner Agent — enabling
-                agents to deploy intelligent automations without code.
-              </li>
-              <li>
-                Followed end-to-end product delivery process: PRD review, design
-                handoff, feature implementation, QA coordination, and deployment
-                — maintaining high release quality across sprints.
-              </li>
-            </ul>
-          </div>
-
-          <div class="project-item">
-            <div class="project-title">Enterprise KPI Management System</div>
-            <div class="project-role">Lead Frontend</div>
-            <div class="project-date">
-              <svg
-                width="14"
-                height="14"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-              >
-                <path
-                  d="M19 4H18V2H16V4H8V2H6V4H5C3.9 4 3 4.9 3 6V20C3 21.1 3.9 22 5 22H19C20.1 22 21 21.1 21 20V6C21 4.9 20.1 4 19 4ZM19 20H5V9H19V20ZM5 7V6H19V7H5Z"
-                />
-              </svg>
-              <span> May 2023 - current </span>
-            </div>
-            <div class="technologies">
-              <div><strong>Role:</strong> Frontend Team Lead</div>
-              <div>
-                <strong>Team Size:</strong> 8 members (1 PM, 3 Frontend, 2
-                Backend, 2 BA)
-              </div>
-              <div>
-                <strong>Technologies:</strong> Vue.js, Quasar, Vite, HTML5,
-                CSS3, SCSS, JavaScript, Docker, CI/CD, Cypress E2E Testing, PWA
-              </div>
-            </div>
-            <ul class="responsibilities">
-              <li>
-                Developed a comprehensive enterprise-level KPI management system
-                used in collaboration with a Big4 Company in Vietnam, supporting
-                real-world enterprise performance tracking and analytics
-              </li>
-              <li>
-                Built intuitive user interface featuring keyboard shortcuts,
-                interactive data visualizations, advanced filtering, and
-                detailed reporting tables for enhanced productivity
-              </li>
-              <li>
-                Implemented robust role-based access control system supporting
-                System Administrators, Department Heads, and Employees with
-                granular permission management
-              </li>
-              <li>
-                Engineered advanced features including Excel data import/export,
-                organizational hierarchy management, automated goal allocation,
-                real-time reporting, and multi-language support
-              </li>
-              <li>
-                Integrated Progressive Web App capabilities with push
-                notifications, offline caching, and background sync for improved
-                performance and user engagement
-              </li>
-            </ul>
-          </div>
 
           <!-- <div class="project-item">
             <div class="project-title">Document Workflow Management System</div>
@@ -903,9 +944,12 @@
             </ul>
           </div> -->
 
+          <!-- Lofty -->
           <div class="project-item">
-            <div class="project-title">Personal Blog & Portfolio Website</div>
-            <div class="project-role">Full-stack Developer & Creator</div>
+            <div class="project-title">
+              Lofty – AI-Powered Real Estate Platform
+            </div>
+            <div class="project-role">Frontend Engineer · Moatable</div>
             <div class="project-date">
               <svg
                 width="14"
@@ -917,7 +961,119 @@
                   d="M19 4H18V2H16V4H8V2H6V4H5C3.9 4 3 4.9 3 6V20C3 21.1 3.9 22 5 22H19C20.1 22 21 21.1 21 20V6C21 4.9 20.1 4 19 4ZM19 20H5V9H19V20ZM5 7V6H19V7H5Z"
                 />
               </svg>
-              <span> Jan 2025 - current </span>
+              <span>May 2025 – Present</span>
+            </div>
+
+            <div class="technologies">
+              <div>
+                <strong>Team Size:</strong> 100+ (cross-region: VN & CN)
+              </div>
+              <div>
+                <strong>Technologies:</strong> Vue.js 2/3, LogicFlow,
+                JavaScript, TypeScript, LESS, RESTful APIs, WebSocket
+              </div>
+              <div>
+                <strong>Website:</strong>
+                <a href="https://lofty.com" target="_blank" class="live-demo"
+                  >lofty.com</a
+                >
+              </div>
+            </div>
+            <ul class="responsibilities">
+              <li>
+                Built and iterated on the <strong>Smart Plan</strong> automation
+                module a workflow engine for configuring lead nurturing
+                sequences with conditional triggers, multi-channel actions, and
+                real-time enrollment tracking.
+              </li>
+              <li>
+                Contributed to <strong>Lofty AI</strong> features including AI
+                Workflow builder, Agent Studio, and Homeowner Agent enabling
+                agents to deploy intelligent automations without code.
+              </li>
+              <li>
+                Followed end-to-end product delivery process: PRD review, design
+                handoff, feature implementation, QA coordination, and deployment
+                maintaining high release quality across sprints.
+              </li>
+            </ul>
+          </div>
+
+          <div class="project-item">
+            <div class="project-title">Enterprise KPI Management System</div>
+            <div class="project-role">Frontend Team Lead</div>
+            <div class="project-date">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M19 4H18V2H16V4H8V2H6V4H5C3.9 4 3 4.9 3 6V20C3 21.1 3.9 22 5 22H19C20.1 22 21 21.1 21 20V6C21 4.9 20.1 4 19 4ZM19 20H5V9H19V20ZM5 7V6H19V7H5Z"
+                />
+              </svg>
+              <span> May 2023 - current </span>
+            </div>
+            <div class="technologies">
+              <div><strong>Role:</strong> Frontend Team Lead</div>
+              <div>
+                <strong>Team Size:</strong> 8 members (1 PM, 3 Frontend, 2
+                Backend, 2 BA)
+              </div>
+              <div>
+                <strong>Technologies:</strong> Vue.js, Quasar, Vite, HTML5,
+                CSS3, SCSS, JavaScript, Docker, CI/CD, Cypress E2E Testing, PWA
+              </div>
+            </div>
+            <ul class="responsibilities">
+              <li>
+                Delivered KPI management platform used by 1500+ employees across
+                30+ departments in collaboration with a Big4 firm in Vietnam
+                supporting enterprise-wide performance tracking and analytics
+              </li>
+              <li>
+                Built data-dense UI featuring keyboard shortcuts, interactive
+                charts, advanced filtering, and reporting tables reducing manual
+                reporting time for department heads
+              </li>
+              <li>
+                Implemented role-based access control with 3 permission tiers
+                (System Admin, Department Head, Employee) and granular
+                feature-level access management
+              </li>
+              <li>
+                Engineered Excel import/export, org hierarchy management,
+                automated goal allocation, real-time reporting, and
+                multi-language support (Vietnamese/English)
+              </li>
+              <li>
+                Delivered PWA with push notifications, offline caching, and
+                background sync enabling full functionality without internet
+                access in field environments
+              </li>
+            </ul>
+          </div>
+
+          <div class="project-item">
+            <div class="project-title">Personal Blog & Portfolio Website</div>
+            <div class="project-role">
+              Full-stack Developer & Creator · Side Project
+            </div>
+            <div class="project-date">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M19 4H18V2H16V4H8V2H6V4H5C3.9 4 3 4.9 3 6V20C3 21.1 3.9 22 5 22H19C20.1 22 21 21.1 21 20V6C21 4.9 20.1 4 19 4ZM19 20H5V9H19V20ZM5 7V6H19V7H5Z"
+                />
+              </svg>
+              <span
+                >Jan 2025 – Present · Maintained alongside full-time work</span
+              >
             </div>
             <div class="technologies">
               <div>
@@ -1050,6 +1206,63 @@
   //   link.click();
   //   document.body.removeChild(link);
   // }
+
+  // ── Theme Switcher ──
+  const themes = {
+    "tech-corporate": {
+      accent: "#0f4c81",
+      accentHover: "#0a3a6b",
+      sidebarBg: "#f4f7fc",
+      shadow: "rgba(15, 76, 129, 0.25)",
+      shadowHover: "rgba(15, 76, 129, 0.35)",
+    },
+    "modern-tech": {
+      accent: "#2c3e50",
+      accentHover: "#1a252f",
+      sidebarBg: "#f8f9fa",
+      shadow: "rgba(44, 62, 80, 0.25)",
+      shadowHover: "rgba(44, 62, 80, 0.35)",
+    },
+    minimalist: {
+      accent: "#008080",
+      accentHover: "#006666",
+      sidebarBg: "#fafafa",
+      shadow: "rgba(0, 128, 128, 0.25)",
+      shadowHover: "rgba(0, 128, 128, 0.35)",
+    },
+    "navy-dark": {
+      accent: "#102a43",
+      accentHover: "#0a1f30",
+      sidebarBg: "#eff3f8",
+      shadow: "rgba(16, 42, 67, 0.25)",
+      shadowHover: "rgba(16, 42, 67, 0.35)",
+    },
+  };
+
+  function applyTheme(themeName) {
+    const theme = themes[themeName];
+    const root = document.documentElement;
+    root.style.setProperty("--accent", theme.accent);
+    root.style.setProperty("--accent-hover", theme.accentHover);
+    root.style.setProperty("--sidebar-bg", theme.sidebarBg);
+    root.style.setProperty("--shadow", theme.shadow);
+    root.style.setProperty("--shadow-hover", theme.shadowHover);
+    document.querySelectorAll(".theme-option").forEach(function (el) {
+      el.classList.toggle("active", el.dataset.theme === themeName);
+    });
+    document.getElementById("theme-picker").classList.remove("open");
+  }
+
+  function toggleThemePicker() {
+    document.getElementById("theme-picker").classList.toggle("open");
+  }
+
+  document.addEventListener("click", function (e) {
+    if (!e.target.closest(".theme-switcher")) {
+      var picker = document.getElementById("theme-picker");
+      if (picker) picker.classList.remove("open");
+    }
+  });
 
   function toggleLanguage() {
     const currentLang = document.documentElement.lang;
